@@ -1,0 +1,286 @@
+/* ==========================================================================
+   Bloom & Batter Cake Studio — Custom Stylesheet
+   Handles: fonts, scalloped "fondant-edge" motif, blob animations,
+   drawer/menu transitions, scrollbar, focus states, reduced motion.
+   ========================================================================== */
+
+:root{
+  --scallop-size: 26px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce){
+  html{ scroll-behavior: auto; }
+  *, *::before, *::after{
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+.font-display{
+  font-family: 'Fraunces', serif;
+}
+.font-script{
+  font-family: 'Caveat', cursive;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar{ width: 10px; height: 10px; }
+::-webkit-scrollbar-track{ background: transparent; }
+::-webkit-scrollbar-thumb{ background: #C9184A; border-radius: 999px; }
+.dark ::-webkit-scrollbar-thumb{ background: #F4A261; }
+
+/* ---------- Focus states (accessibility) ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible{
+  outline: 3px solid #F4A261;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Scalloped "fondant edge" divider (signature motif) ---------- */
+.scallop-top,
+.scallop-bottom{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: var(--scallop-size);
+  background-repeat: repeat-x;
+  background-size: var(--scallop-size) var(--scallop-size);
+}
+.scallop-top{
+  background-image: radial-gradient(circle at calc(var(--scallop-size)/2) 0, transparent calc(var(--scallop-size)/2 - 1px), var(--scallop-color, #FFF8F0) calc(var(--scallop-size)/2));
+  transform: translateY(1px);
+}
+.scallop-bottom{
+  background-image: radial-gradient(circle at calc(var(--scallop-size)/2) var(--scallop-size), transparent calc(var(--scallop-size)/2 - 1px), var(--scallop-color, #FFF8F0) calc(var(--scallop-size)/2));
+  transform: translateY(-1px);
+}
+
+/* Card fondant-edge cap sits above the card image */
+.cake-card{
+  position: relative;
+}
+
+/* Event category cards (Menu page "Cakes for Every Celebration") */
+.event-card{
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+.event-card:hover{
+  transform: translateY(-4px);
+}
+.cake-card .card-edge{
+  --scallop-size: 20px;
+  --scallop-color: inherit;
+  height: 16px;
+}
+
+/* ---------- Sprinkle dot pattern background ---------- */
+.sprinkle-bg{
+  background-image: radial-gradient(currentColor 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  color: #C9184A;
+  opacity: 0.08;
+}
+.dark .sprinkle-bg{
+  color: #F4A261;
+  opacity: 0.10;
+}
+
+/* ---------- Floating blob animation (hero) ---------- */
+@keyframes float-slow{
+  0%, 100%{ transform: translate(0,0) scale(1); }
+  50%{ transform: translate(14px,-18px) scale(1.05); }
+}
+@keyframes float-slower{
+  0%, 100%{ transform: translate(0,0) scale(1); }
+  50%{ transform: translate(-16px,16px) scale(1.08); }
+}
+.blob-a{ animation: float-slow 9s ease-in-out infinite; }
+.blob-b{ animation: float-slower 11s ease-in-out infinite; }
+
+/* ---------- Bounce scroll indicator ---------- */
+@keyframes bounce-y{
+  0%, 100%{ transform: translateY(0); opacity: .6; }
+  50%{ transform: translateY(10px); opacity: 1; }
+}
+.scroll-bounce{ animation: bounce-y 2s ease-in-out infinite; }
+
+/* ---------- Gradient text ---------- */
+.text-gradient{
+  background: linear-gradient(90deg,#C9184A,#F4A261);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Mobile drawer ---------- */
+/* The drawer always docks to the physical right edge (see `right-0` on
+   #mobile-drawer in the HTML) and always slides in from the right, in both
+   LTR and RTL. It intentionally does NOT mirror sides with direction: a
+   transform-based "closed" offset tied to `dir` but not matched by an
+   equal flip of the drawer's physical docking side would place the panel
+   only *partially* off-screen — visible mid-viewport — the moment RTL is
+   toggled, even without opening it. Keeping one fixed slide direction
+   avoids that whole bug class. RTL still changes text alignment/reading
+   order inside the drawer via the inherited `dir` attribute. */
+#mobile-drawer{
+  transition: transform .35s ease;
+  transform: translateX(100%);
+}
+#mobile-drawer.open{
+  transform: translateX(0);
+}
+#drawer-backdrop{
+  transition: opacity .35s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+#drawer-backdrop.open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Header: always-visible glass background ----------
+   Header keeps a solid, high-contrast background at all times (not just
+   after scrolling) so nav text/icons stay readable over any hero image,
+   in both light and dark mode. */
+#site-header{
+  transition: box-shadow .3s ease, background-color .3s ease;
+  background-color: rgba(255, 253, 251, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.dark #site-header{
+  background-color: rgba(31, 21, 14, 0.92);
+}
+#site-header.header-scrolled{
+  box-shadow: 0 8px 30px -12px rgba(31,21,14,0.35);
+}
+
+/* ---------- Category card hover overlay ---------- */
+.occasion-card img{
+  transition: transform .6s ease;
+}
+.occasion-card:hover img{
+  transform: scale(1.08);
+}
+.occasion-card .occasion-overlay{
+  transition: background-color .4s ease;
+}
+
+/* ---------- Header "Order Now" CTA — bold gradient with a soft pulsing glow ---------- */
+.btn-header-cta{
+  position: relative;
+  isolation: isolate;
+  background: linear-gradient(90deg,#C9184A,#F4A261);
+  letter-spacing: .01em;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.btn-header-cta:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -10px rgba(201,24,74,.55);
+}
+.btn-header-cta::before{
+  content: "";
+  position: absolute;
+  inset: -6px;
+  z-index: -1;
+  border-radius: 9999px;
+  background: linear-gradient(90deg,#C9184A,#F4A261);
+  filter: blur(11px);
+  opacity: .45;
+  animation: header-cta-pulse 2.6s ease-in-out infinite;
+}
+.btn-header-cta .cta-arrow{
+  transition: transform .3s ease;
+}
+.btn-header-cta:hover .cta-arrow{
+  transform: translateX(4px);
+}
+html[dir="rtl"] .btn-header-cta:hover .cta-arrow{
+  transform: translateX(-4px);
+}
+@keyframes header-cta-pulse{
+  0%, 100%{ opacity: .3; transform: scale(0.94); }
+  50%{ opacity: .6; transform: scale(1.08); }
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary{
+  background: linear-gradient(90deg,#C9184A,#E85D75);
+  transition: box-shadow .3s ease, transform .3s ease, background .3s ease;
+}
+.btn-primary:hover{
+  box-shadow: 0 10px 30px -8px rgba(201,24,74,.55);
+  transform: translateY(-2px);
+}
+.btn-outline{
+  transition: background-color .3s ease, color .3s ease, transform .3s ease;
+}
+.btn-outline:hover{
+  transform: translateY(-2px);
+}
+
+/* ---------- Fade/zoom fallback if AOS fails to load ---------- */
+[data-aos]{
+  opacity: 1;
+}
+
+/* ---------- Filter tab reveal transition (Menu / Gallery category tabs) ----------
+   Independent of AOS: guarantees a smooth, consistent reveal every time a
+   card is un-hidden by the filter tabs, regardless of whether AOS has
+   already scroll-animated that card in. */
+@keyframes filter-fade-in{
+  from{ opacity: 0; transform: translateY(10px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+.filter-fade-in{
+  animation: filter-fade-in .45s ease both;
+}
+
+/* ---------- Accordion ---------- */
+.faq-panel{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease;
+}
+.faq-icon{
+  transition: transform .3s ease;
+}
+.faq-item.open .faq-icon{
+  transform: rotate(45deg);
+}
+
+/* ---------- Tabs / filter active state handled via Tailwind classes in JS ---------- */
+
+/* ---------- Back to top ---------- */
+#back-to-top{
+  transition: opacity .3s ease, transform .3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+#back-to-top.show{
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ---------- Image fallback ---------- */
+img.img-fallback-active{
+  background: linear-gradient(135deg,#FCE4EC,#FFE8D6);
+}
+
+/* ---------- Utility: no horizontal overflow guard ---------- */
+html, body{ max-width: 100%; overflow-x: hidden; }

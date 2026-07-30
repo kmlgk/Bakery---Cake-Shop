@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Story | Bloom & Batter Cake Studio</title>
+<meta name="description" content="Meet the bakers behind Bloom & Batter Cake Studio — our story, our values, and the milestones behind 14 years of handcrafted cakes in Riverdale.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%82%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          raspberry: {50:'#FDF2F4',100:'#FBE4E9',200:'#F6C1CE',300:'#F09DB0',400:'#DF5A79',500:'#C9184A',600:'#B4123F',700:'#8F0E33',800:'#6B0A26',900:'#4A071B'},
+          caramel: {50:'#FFF8F0',100:'#FEEEDB',200:'#FCD9AE',300:'#FAC480',400:'#F7AE61',500:'#F4A261',600:'#E07E2F',700:'#B5621F',800:'#8A4A17',900:'#5F3210'},
+          cream: {50:'#FFFDFB',100:'#FFF8F0',200:'#FFF1E0',300:'#FCE4EC',400:'#F9D8DE'},
+          choco: {50:'#F5EFEA',100:'#E7DAD0',200:'#C9B3A2',300:'#A3806A',400:'#7A5A45',500:'#5A3E2C',600:'#4A3221',700:'#3D2B1F',800:'#2E2016',900:'#1F150E'}
+        },
+        fontFamily: { display: ['Fraunces','serif'], script: ['Caveat','cursive'], body: ['Poppins','sans-serif'] },
+        boxShadow: { soft: '0 20px 45px -15px rgba(201,24,74,.25)' }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-body bg-cream-100 text-choco-700 dark:bg-choco-900 dark:text-cream-100 antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] bg-raspberry-600 text-white px-4 py-2 rounded-lg">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between gap-2 h-20 lg:h-24">
+      <a href="index.html" class="group flex items-center shrink-0 min-w-0" aria-label="Bloom & Batter home">
+        <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom & Batter Cake Studio logo" class="h-16 lg:h-20 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300">
+      </a>
+
+      <nav class="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-6 px-4" aria-label="Primary">
+        <div class="relative" data-dropdown>
+          <button type="button" data-dropdown-trigger aria-haspopup="true" aria-expanded="false" class="inline-flex items-center gap-1.5 font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
+            Home <i data-dropdown-caret class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
+          </button>
+          <div data-dropdown-panel class="hidden absolute left-0 rtl:left-auto rtl:right-0 top-full mt-3 w-48 bg-white dark:bg-choco-800 rounded-xl shadow-soft border border-choco-100 dark:border-choco-700 py-2 z-50" role="menu">
+            <a href="index.html" data-nav-link role="menuitem" class="block px-4 py-2.5 text-sm text-choco-700 dark:text-cream-100 hover:bg-cream-100 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 1</a>
+            <a href="home-1.html" data-nav-link role="menuitem" class="block px-4 py-2.5 text-sm text-choco-700 dark:text-cream-100 hover:bg-cream-100 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 2</a>
+          </div>
+        </div>
+        <a href="about.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">About</a>
+        <a href="menu.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Menu</a>
+        <a href="gallery.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Gallery</a>
+        <a href="faq.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">FAQ</a>
+        <a href="contact.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
+        <button data-theme-toggle type="button" aria-label="Toggle dark mode" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition shrink-0">
+          <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
+        </button>
+        <button data-dir-toggle type="button" aria-label="Toggle text direction" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition text-xs font-semibold shrink-0">
+          <span data-dir-label>RTL</span>
+        </button>
+        <a href="order.html" class="btn-header-cta hidden xl:inline-flex items-center gap-2 text-white text-sm font-bold px-6 py-3 rounded-full whitespace-nowrap shrink-0">
+          <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Order Now
+          <i class="fa-solid fa-arrow-right cta-arrow rtl:rotate-180" aria-hidden="true"></i>
+        </a>
+        <button id="drawer-open" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu" class="xl:hidden w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 shrink-0">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MOBILE DRAWER ===================== -->
+<div id="drawer-backdrop" class="fixed inset-0 bg-choco-900/60 z-[60]"></div>
+<aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-[86%] max-w-sm bg-cream-50 dark:bg-choco-900 z-[70] shadow-2xl p-6 flex flex-col" aria-label="Mobile navigation">
+  <div class="flex items-center justify-between mb-8">
+    <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom &amp; Batter Cake Studio logo" class="h-14 w-auto object-contain drop-shadow-sm">
+    <button id="drawer-close" type="button" aria-label="Close menu" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200 dark:bg-choco-800 text-choco-700 dark:text-cream-100">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-1 text-lg" aria-label="Mobile primary">
+    <a href="index.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 1</a>
+    <a href="home-1.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 2</a>
+    <a href="about.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">About</a>
+    <a href="menu.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Menu</a>
+    <a href="gallery.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Gallery</a>
+    <a href="order.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Custom Order</a>
+    <a href="faq.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">FAQ</a>
+    <a href="contact.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Contact</a>
+  </nav>
+  <div class="mt-6 flex items-center gap-3">
+    <button data-theme-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+      <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span> Theme
+    </button>
+    <button data-dir-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+      <i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> <span data-dir-label>RTL</span>
+    </button>
+  </div>
+  <a href="order.html" class="btn-primary mt-4 text-center text-white font-semibold py-3 rounded-full">Order a Custom Cake</a>
+  <div class="mt-auto pt-6 text-sm text-choco-500 dark:text-cream-300">
+    <p><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>+1 (555) 214-6688</p>
+    <p class="mt-1"><i class="fa-solid fa-location-dot mr-2" aria-hidden="true"></i>212 Magnolia Ave, Riverdale</p>
+  </div>
+</aside>
+
+<main id="main-content">
+<!-- ===================== INNER HERO ===================== -->
+<section class="relative pt-40 pb-24 lg:pt-48 lg:pb-28 overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80&auto=format&fit=crop" data-fallback alt="Interior of Bloom & Batter bakery kitchen" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-br from-raspberry-800/90 via-choco-900/85 to-caramel-700/80"></div>
+  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center">
+    <nav aria-label="Breadcrumb" class="flex items-center justify-center gap-2 text-sm text-cream-200/80">
+      <a href="index.html" class="hover:text-white">Home</a>
+      <i class="fa-solid fa-chevron-right rtl:rotate-180 text-[10px]" aria-hidden="true"></i>
+      <span aria-current="page" class="text-white">About</span>
+    </nav>
+    <h1 class="font-display text-4xl lg:text-5xl font-semibold text-white mt-4">Our Story, Baked In</h1>
+    <p class="text-cream-200/90 mt-4 max-w-xl mx-auto">Fourteen years, one small kitchen, and a belief that celebration cake should taste as good as it looks.</p>
+  </div>
+</section>
+
+<!-- ===================== OUR STORY (split) ===================== -->
+<section class="py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="relative" data-aos="fade-right">
+      <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=800&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Founder Elena Moreau decorating a cake in the studio kitchen" class="rounded-[2.5rem] w-full h-[420px] object-cover shadow-soft">
+      <div class="absolute -bottom-8 -right-6 bg-white dark:bg-choco-800 rounded-3xl shadow-soft p-5 max-w-[220px] hidden sm:block">
+        <p class="font-script text-2xl text-raspberry-600 dark:text-caramel-400 leading-none">"Every order is somebody's big day."</p>
+        <p class="text-xs text-choco-500 dark:text-cream-300 mt-2">— Elena Moreau, Founder</p>
+      </div>
+    </div>
+    <div data-aos="fade-left">
+      <span class="font-script text-2xl text-caramel-600 dark:text-caramel-300">How it started</span>
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold mt-2">A Kitchen Table, a Wedding Cake, and a Waitlist</h2>
+      <p class="text-choco-500 dark:text-cream-300 mt-5 leading-relaxed">
+        In 2011, Elena Moreau baked her sister's wedding cake on a borrowed kitchen table. Guests asked for her number before the first slice was cut — and Bloom &amp; Batter was born three weeks later out of a rented storefront on Magnolia Avenue.
+      </p>
+      <p class="text-choco-500 dark:text-cream-300 mt-4 leading-relaxed">
+        Today our team of six decorators still hand-sketches every custom order, still bakes in small batches every morning, and still believes the best cakes come from listening closely to the story behind each celebration.
+      </p>
+      <div class="grid grid-cols-2 gap-6 mt-8">
+        <div>
+          <p class="font-display text-3xl font-semibold text-raspberry-600 dark:text-caramel-400"><span data-count-to="14">0</span> yrs</p>
+          <p class="text-sm text-choco-500 dark:text-cream-300">Baking in Riverdale</p>
+        </div>
+        <div>
+          <p class="font-display text-3xl font-semibold text-raspberry-600 dark:text-caramel-400"><span data-count-to="6">0</span></p>
+          <p class="text-sm text-choco-500 dark:text-cream-300">In-house decorators</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VALUES (horizontal icon row) ===================== -->
+<section class="py-20 bg-choco-900 text-cream-100">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-16">
+      <div class="lg:w-1/3" data-aos="fade-up">
+        <span class="font-script text-2xl text-caramel-300">What guides us</span>
+        <h2 class="font-display text-3xl font-semibold mt-2 text-white">Our Values</h2>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-8 flex-1">
+        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="0">
+          <i class="fa-solid fa-heart text-caramel-300 text-2xl mt-1" aria-hidden="true"></i>
+          <div>
+            <h3 class="font-display font-semibold text-white">Made with Care</h3>
+            <p class="text-sm text-cream-300 mt-1">Small batches, hand-mixed, never rushed.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="100">
+          <i class="fa-solid fa-comments text-caramel-300 text-2xl mt-1" aria-hidden="true"></i>
+          <div>
+            <h3 class="font-display font-semibold text-white">Honest Communication</h3>
+            <p class="text-sm text-cream-300 mt-1">Clear quotes, real timelines, no surprises.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4" data-aos="fade-up" data-aos-delay="200">
+          <i class="fa-solid fa-seedling text-caramel-300 text-2xl mt-1" aria-hidden="true"></i>
+          <div>
+            <h3 class="font-display font-semibold text-white">Community Rooted</h3>
+            <p class="text-sm text-cream-300 mt-1">Sourced from Riverdale farms whenever possible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MEET THE BAKERS (flip cards) ===================== -->
+<section class="py-24 lg:py-28">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <span class="font-script text-2xl text-caramel-600 dark:text-caramel-300">The hands behind the cakes</span>
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold mt-2">Meet the Bakers</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7 mt-14">
+      <div class="group [perspective:1000px] h-80" data-aos="fade-up">
+        <div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <div class="absolute inset-0 rounded-3xl overflow-hidden [backface-visibility:hidden]">
+            <img src="https://images.unsplash.com/photo-1595273670150-bd0c3c392e46?w=500&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Elena Moreau, Founder and Head Decorator" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-choco-900/90 to-transparent p-4">
+              <p class="text-white font-semibold">Elena Moreau</p>
+            </div>
+          </div>
+          <div class="absolute inset-0 rounded-3xl bg-raspberry-600 text-white p-6 flex flex-col justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <p class="font-display font-semibold text-lg">Founder &amp; Head Decorator</p>
+            <p class="text-sm text-white/90 mt-2">Wedding and sculpted-cake specialist, 14 years experience.</p>
+          </div>
+        </div>
+      </div>
+      <div class="group [perspective:1000px] h-80" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <div class="absolute inset-0 rounded-3xl overflow-hidden [backface-visibility:hidden]">
+            <img src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?w=500&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Marcus Webb, Pastry Chef" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-choco-900/90 to-transparent p-4">
+              <p class="text-white font-semibold">Marcus Webb</p>
+            </div>
+          </div>
+          <div class="absolute inset-0 rounded-3xl bg-caramel-500 text-white p-6 flex flex-col justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <p class="font-display font-semibold text-lg">Pastry Chef</p>
+            <p class="text-sm text-white/90 mt-2">Leads flavor development and our gluten-free line.</p>
+          </div>
+        </div>
+      </div>
+      <div class="group [perspective:1000px] h-80" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <div class="absolute inset-0 rounded-3xl overflow-hidden [backface-visibility:hidden]">
+            <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=500&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Priya Nair, Custom Cake Designer" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-choco-900/90 to-transparent p-4">
+              <p class="text-white font-semibold">Priya Nair</p>
+            </div>
+          </div>
+          <div class="absolute inset-0 rounded-3xl bg-raspberry-600 text-white p-6 flex flex-col justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <p class="font-display font-semibold text-lg">Custom Cake Designer</p>
+            <p class="text-sm text-white/90 mt-2">Turns theme references and sketches into 3D concepts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="group [perspective:1000px] h-80" data-aos="fade-up" data-aos-delay="300">
+        <div class="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <div class="absolute inset-0 rounded-3xl overflow-hidden [backface-visibility:hidden]">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Tomás Ruiz, Front of House Manager" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-choco-900/90 to-transparent p-4">
+              <p class="text-white font-semibold">Tomás Ruiz</p>
+            </div>
+          </div>
+          <div class="absolute inset-0 rounded-3xl bg-caramel-500 text-white p-6 flex flex-col justify-center text-center [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <p class="font-display font-semibold text-lg">Front of House Manager</p>
+            <p class="text-sm text-white/90 mt-2">Coordinates pickup, delivery, and every order timeline.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MILESTONES (vertical timeline) ===================== -->
+<section class="py-24 lg:py-28 bg-cream-200/60 dark:bg-choco-950/40">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8">
+    <div class="text-center" data-aos="fade-up">
+      <span class="font-script text-2xl text-caramel-600 dark:text-caramel-300">Milestones</span>
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold mt-2">14 Years, One Slice at a Time</h2>
+    </div>
+
+    <ol class="relative border-s-2 border-raspberry-200 dark:border-choco-700 mt-14 ms-4">
+      <li class="relative mb-12 ms-8" data-aos="fade-up">
+        <span class="absolute -start-10 top-1 w-4 h-4 rounded-full bg-raspberry-600"></span>
+        <p class="text-sm text-caramel-600 dark:text-caramel-300 font-semibold">2011</p>
+        <h3 class="font-display text-lg font-semibold mt-1">Bloom &amp; Batter opens on Magnolia Ave</h3>
+        <p class="text-sm text-choco-500 dark:text-cream-300 mt-1">Started with one oven and a waitlist of wedding orders.</p>
+      </li>
+      <li class="relative mb-12 ms-8" data-aos="fade-up" data-aos-delay="100">
+        <span class="absolute -start-10 top-1 w-4 h-4 rounded-full bg-raspberry-600"></span>
+        <p class="text-sm text-caramel-600 dark:text-caramel-300 font-semibold">2015</p>
+        <h3 class="font-display text-lg font-semibold mt-1">Custom theme cakes launch</h3>
+        <p class="text-sm text-choco-500 dark:text-cream-300 mt-1">Introduced our sketch-first custom design process.</p>
+      </li>
+      <li class="relative mb-12 ms-8" data-aos="fade-up" data-aos-delay="200">
+        <span class="absolute -start-10 top-1 w-4 h-4 rounded-full bg-raspberry-600"></span>
+        <p class="text-sm text-caramel-600 dark:text-caramel-300 font-semibold">2020</p>
+        <h3 class="font-display text-lg font-semibold mt-1">Gluten-free & eco-packaging line</h3>
+        <p class="text-sm text-choco-500 dark:text-cream-300 mt-1">Expanded the menu and switched to recyclable delivery boxes.</p>
+      </li>
+      <li class="relative ms-8" data-aos="fade-up" data-aos-delay="300">
+        <span class="absolute -start-10 top-1 w-4 h-4 rounded-full bg-caramel-500"></span>
+        <p class="text-sm text-caramel-600 dark:text-caramel-300 font-semibold">2026</p>
+        <h3 class="font-display text-lg font-semibold mt-1">6,200+ cakes baked and counting</h3>
+        <p class="text-sm text-choco-500 dark:text-cream-300 mt-1">Still family-run, still hand-decorated, still local.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="py-20 lg:py-24">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8">
+    <div class="relative rounded-[2.5rem] overflow-hidden" data-aos="zoom-in">
+      <img src="https://images.unsplash.com/photo-1587241321921-91a834d6d191?w=1400&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Interior of the Bloom & Batter bakery with fresh bread and pastries on display" class="w-full h-72 object-cover">
+      <div class="absolute inset-0 bg-choco-900/70 flex items-center">
+        <div class="px-8 lg:px-16 max-w-lg">
+          <h2 class="font-display text-2xl lg:text-3xl font-semibold text-white">Come Taste the Difference</h2>
+          <p class="text-cream-200 mt-3">Visit our Magnolia Ave studio for a tasting box, or start your custom cake enquiry online.</p>
+          <a href="order.html" class="btn-primary inline-flex items-center gap-2 text-white font-semibold px-6 py-3 rounded-full mt-6">
+            Start an Enquiry <i class="fa-solid fa-arrow-right rtl:rotate-180" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative bg-choco-900 text-cream-200">
+  <div class="scallop-top" style="--scallop-color:#1F150E;"></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-14 pb-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <span class="font-display text-2xl font-semibold text-white">Bloom &amp; Batter</span>
+        <p class="text-sm text-cream-400 mt-3">Handcrafted cakes for birthdays, weddings, and everything worth celebrating — baked fresh in Riverdale since 2011.</p>
+        <div class="flex items-center gap-3 mt-5">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Pinterest" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Quick Links</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-cream-400">
+          <li><a href="about.html" class="hover:text-caramel-300 transition">Our Story</a></li>
+          <li><a href="menu.html" class="hover:text-caramel-300 transition">Menu</a></li>
+          <li><a href="gallery.html" class="hover:text-caramel-300 transition">Gallery</a></li>
+          <li><a href="faq.html" class="hover:text-caramel-300 transition">FAQ</a></li>
+          <li><a href="contact.html" class="hover:text-caramel-300 transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Occasions</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-cream-400">
+          <li><a href="menu.html#birthday" class="hover:text-caramel-300 transition">Birthday Cakes</a></li>
+          <li><a href="menu.html#wedding" class="hover:text-caramel-300 transition">Wedding Cakes</a></li>
+          <li><a href="menu.html#custom" class="hover:text-caramel-300 transition">Custom Themes</a></li>
+          <li><a href="order.html" class="hover:text-caramel-300 transition">Custom Enquiry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Stay Sweetly Updated</h3>
+        <p class="text-sm text-cream-400 mt-4">Get seasonal flavors and limited slots in your inbox.</p>
+        <form data-newsletter class="mt-4 flex gap-2">
+          <label for="footer-newsletter" class="sr-only">Email address</label>
+          <input id="footer-newsletter" type="email" required placeholder="you@example.com" class="min-w-0 flex-1 px-4 py-2.5 rounded-full bg-white/10 border border-white/20 text-sm text-white placeholder:text-cream-400 focus:outline-none focus:border-caramel-400">
+          <button type="submit" class="w-11 h-11 shrink-0 rounded-full bg-raspberry-600 grid place-items-center hover:bg-raspberry-500 transition" aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane text-sm" aria-hidden="true"></i>
+          </button>
+        </form>
+        <p data-newsletter-msg class="text-xs mt-2 hidden" role="status"></p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream-500">
+      <p>&copy; 2026 Bloom &amp; Batter Cake Studio. All rights reserved.</p>
+      <p>212 Magnolia Ave, Riverdale &middot; Open Tue–Sun, 8am–6pm</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" type="button" aria-label="Back to top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-12 h-12 rounded-full bg-raspberry-600 text-white shadow-lg grid place-items-center hover:bg-raspberry-500">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu | Bloom & Batter Cake Studio</title>
+<meta name="description" content="Browse Bloom & Batter's cake menu by occasion — birthday, wedding, custom theme, cupcakes and seasonal specials — with prices and daily highlights.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%82%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          raspberry: {50:'#FDF2F4',100:'#FBE4E9',200:'#F6C1CE',300:'#F09DB0',400:'#DF5A79',500:'#C9184A',600:'#B4123F',700:'#8F0E33',800:'#6B0A26',900:'#4A071B'},
+          caramel: {50:'#FFF8F0',100:'#FEEEDB',200:'#FCD9AE',300:'#FAC480',400:'#F7AE61',500:'#F4A261',600:'#E07E2F',700:'#B5621F',800:'#8A4A17',900:'#5F3210'},
+          cream: {50:'#FFFDFB',100:'#FFF8F0',200:'#FFF1E0',300:'#FCE4EC',400:'#F9D8DE'},
+          choco: {50:'#F5EFEA',100:'#E7DAD0',200:'#C9B3A2',300:'#A3806A',400:'#7A5A45',500:'#5A3E2C',600:'#4A3221',700:'#3D2B1F',800:'#2E2016',900:'#1F150E'}
+        },
+        fontFamily: { display: ['Fraunces','serif'], script: ['Caveat','cursive'], body: ['Poppins','sans-serif'] },
+        boxShadow: { soft: '0 20px 45px -15px rgba(201,24,74,.25)' }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-body bg-cream-100 text-choco-700 dark:bg-choco-900 dark:text-cream-100 antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] bg-raspberry-600 text-white px-4 py-2 rounded-lg">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between gap-2 h-20 lg:h-24">
+      <a href="index.html" class="group flex items-center shrink-0 min-w-0" aria-label="Bloom & Batter home">
+        <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom & Batter Cake Studio logo" class="h-16 lg:h-20 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300">
+      </a>
+
+      <nav class="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-6 px-4" aria-label="Primary">
+        <div class="relative" data-dropdown>
+          <button type="button" data-dropdown-trigger aria-haspopup="true" aria-expanded="false" class="inline-flex items-center gap-1.5 font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
+            Home <i data-dropdown-caret class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
+          </button>
+          <div data-dropdown-panel class="hidden absolute left-0 rtl:left-auto rtl:right-0 top-full mt-3 w-48 bg-white dark:bg-choco-800 rounded-xl shadow-soft border border-choco-100 dark:border-choco-700 py-2 z-50" role="menu">
+            <a href="index.html" data-nav-link role="menuitem" class="block px-4 py-2.5 text-sm text-choco-700 dark:text-cream-100 hover:bg-cream-100 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 1</a>
+            <a href="home-1.html" data-nav-link role="menuitem" class="block px-4 py-2.5 text-sm text-choco-700 dark:text-cream-100 hover:bg-cream-100 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 2</a>
+          </div>
+        </div>
+        <a href="about.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">About</a>
+        <a href="menu.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Menu</a>
+        <a href="gallery.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Gallery</a>
+        <a href="faq.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">FAQ</a>
+        <a href="contact.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
+        <button data-theme-toggle type="button" aria-label="Toggle dark mode" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition shrink-0">
+          <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
+        </button>
+        <button data-dir-toggle type="button" aria-label="Toggle text direction" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition text-xs font-semibold shrink-0">
+          <span data-dir-label>RTL</span>
+        </button>
+        <a href="order.html" class="btn-header-cta hidden xl:inline-flex items-center gap-2 text-white text-sm font-bold px-6 py-3 rounded-full whitespace-nowrap shrink-0">
+          <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Order Now
+          <i class="fa-solid fa-arrow-right cta-arrow rtl:rotate-180" aria-hidden="true"></i>
+        </a>
+        <button id="drawer-open" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu" class="xl:hidden w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 shrink-0">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MOBILE DRAWER ===================== -->
+<div id="drawer-backdrop" class="fixed inset-0 bg-choco-900/60 z-[60]"></div>
+<aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-[86%] max-w-sm bg-cream-50 dark:bg-choco-900 z-[70] shadow-2xl p-6 flex flex-col" aria-label="Mobile navigation">
+  <div class="flex items-center justify-between mb-8">
+    <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom &amp; Batter Cake Studio logo" class="h-14 w-auto object-contain drop-shadow-sm">
+    <button id="drawer-close" type="button" aria-label="Close menu" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200 dark:bg-choco-800 text-choco-700 dark:text-cream-100">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-1 text-lg" aria-label="Mobile primary">
+    <a href="index.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 1</a>
+    <a href="home-1.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 2</a>
+    <a href="about.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">About</a>
+    <a href="menu.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Menu</a>
+    <a href="gallery.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Gallery</a>
+    <a href="order.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Custom Order</a>
+    <a href="faq.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">FAQ</a>
+    <a href="contact.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Contact</a>
+  </nav>
+  <div class="mt-6 flex items-center gap-3">
+    <button data-theme-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+      <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span> Theme
+    </button>
+    <button data-dir-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+      <i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> <span data-dir-label>RTL</span>
+    </button>
+  </div>
+  <a href="order.html" class="btn-primary mt-4 text-center text-white font-semibold py-3 rounded-full">Order a Custom Cake</a>
+  <div class="mt-auto pt-6 text-sm text-choco-500 dark:text-cream-300">
+    <p><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>+1 (555) 214-6688</p>
+    <p class="mt-1"><i class="fa-solid fa-location-dot mr-2" aria-hidden="true"></i>212 Magnolia Ave, Riverdale</p>
+  </div>
+</aside>
+
+<main id="main-content">
+<!-- ===================== INNER HERO (solid pattern, no photo) ===================== -->
+<section class="relative pt-40 pb-20 lg:pt-48 lg:pb-24 bg-raspberry-600 overflow-hidden">
+  <div class="absolute inset-0 sprinkle-bg !text-white !opacity-10" aria-hidden="true"></div>
+  <div class="absolute -top-16 -right-10 w-64 h-64 rounded-full bg-caramel-400/30 blur-3xl blob-a" aria-hidden="true"></div>
+  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center">
+    <nav aria-label="Breadcrumb" class="flex items-center justify-center gap-2 text-sm text-white/75">
+      <a href="index.html" class="hover:text-white">Home</a>
+      <i class="fa-solid fa-chevron-right rtl:rotate-180 text-[10px]" aria-hidden="true"></i>
+      <span aria-current="page" class="text-white">Menu</span>
+    </nav>
+    <h1 class="font-display text-4xl lg:text-5xl font-semibold text-white mt-4">Our Cake Menu</h1>
+    <p class="text-white/90 mt-4 max-w-xl mx-auto">Browse by occasion or filter by category — every cake can be resized, re-flavored, or fully customized on request.</p>
+  </div>
+</section>
+
+<!-- ===================== TODAY'S SPECIAL BANNER ===================== -->
+<div class="max-w-6xl mx-auto px-5 lg:px-8 -mt-8 relative z-10">
+  <div data-aos="fade-up" class="bg-white dark:bg-choco-800 rounded-3xl shadow-soft p-6 flex flex-col sm:flex-row items-center gap-5">
+    <div class="w-16 h-16 rounded-2xl bg-caramel-100 dark:bg-caramel-900/40 text-caramel-600 dark:text-caramel-300 grid place-items-center text-2xl shrink-0">
+      <i class="fa-solid fa-sun" aria-hidden="true"></i>
+    </div>
+    <div class="flex-1 text-center sm:text-left">
+      <p class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Today's Highlight</p>
+      <h2 class="font-display text-xl font-semibold">Salted Caramel Cupcake Box — 15% off orders of 2+ dozen</h2>
+    </div>
+    <a href="order.html" class="btn-primary text-white font-semibold px-6 py-2.5 rounded-full whitespace-nowrap">Claim Offer</a>
+  </div>
+</div>
+
+<!-- ===================== EVENT CATEGORY CARDS ===================== -->
+<section class="pt-16 lg:pt-20 pb-4">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
+      <span class="font-script text-2xl text-caramel-600 dark:text-caramel-300">Shop by event</span>
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold mt-2">Cakes for Every Celebration</h2>
+      <p class="text-choco-500 dark:text-cream-300 mt-4">Pick your occasion below to start a custom order with that celebration already selected — or scroll down to browse the full menu.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-12 items-stretch">
+
+      <div class="event-card group h-full flex flex-col bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition" data-aos="fade-up">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1579736283361-4008b21c7ed6?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Pastel baby shower cake with gold confetti, viewed from above" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display text-xl font-semibold">Baby Shower Cakes</h3>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Soft pastel ombre finishes with hand-piped sugar florals to welcome your little one.</p>
+          <div class="flex items-center justify-between gap-3 mt-5">
+            <span class="font-display text-base font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">Starting from $68</span>
+            <a href="order.html?occasion=Baby%20Shower" class="btn-primary inline-flex items-center gap-1.5 text-white text-sm font-semibold px-4 py-2 rounded-full whitespace-nowrap">
+              Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card group h-full flex flex-col bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1742890184772-d2eda8e03de1?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Sleek modern cake branded for a corporate event" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display text-xl font-semibold">Corporate Event Cakes</h3>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Branded logo sheet cakes and bulk orders for launches, meetings, and office celebrations.</p>
+          <div class="flex items-center justify-between gap-3 mt-5">
+            <span class="font-display text-base font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">Starting from $65</span>
+            <a href="order.html?occasion=Corporate%20Event" class="btn-primary inline-flex items-center gap-1.5 text-white text-sm font-semibold px-4 py-2 rounded-full whitespace-nowrap">
+              Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card group h-full flex flex-col bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1688634231525-085e299c249f?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Romantic anniversary cake topped with fresh berries" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display text-xl font-semibold">Anniversary Cakes</h3>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Champagne sponge, berry compote, and edible gold leaf for milestones worth savoring.</p>
+          <div class="flex items-center justify-between gap-3 mt-5">
+            <span class="font-display text-base font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">Starting from $85</span>
+            <a href="order.html?occasion=Anniversary" class="btn-primary inline-flex items-center gap-1.5 text-white text-sm font-semibold px-4 py-2 rounded-full whitespace-nowrap">
+              Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card group h-full flex flex-col bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition" data-aos="fade-up">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Elegant three-tier white wedding cake with floral accents" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display text-xl font-semibold">Wedding Cakes</h3>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Tiered buttercream or naked-cake finishes with a complimentary tasting session.</p>
+          <div class="flex items-center justify-between gap-3 mt-5">
+            <span class="font-display text-base font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $8 / serving</span>
+            <a href="order.html?occasion=Wedding" class="btn-primary inline-flex items-center gap-1.5 text-white text-sm font-semibold px-4 py-2 rounded-full whitespace-nowrap">
+              Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card group h-full flex flex-col bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Colorful birthday cake with lit candles" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <h3 class="font-display text-xl font-semibold">Birthday Cakes</h3>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Colorful, custom-themed designs built around whatever your celebration calls for.</p>
+          <div class="flex items-center justify-between gap-3 mt-5">
+            <span class="font-display text-base font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">Starting from $58</span>
+            <a href="order.html?occasion=Birthday" class="btn-primary inline-flex items-center gap-1.5 text-white text-sm font-semibold px-4 py-2 rounded-full whitespace-nowrap">
+              Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FILTER + GRID ===================== -->
+<section class="py-20 lg:py-24">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="flex flex-wrap justify-center gap-3" data-filter-group="#menu-grid" role="group" aria-label="Filter menu by occasion">
+      <button type="button" data-filter="all" aria-pressed="true" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-raspberry-600 text-white transition">All</button>
+      <button type="button" data-filter="birthday" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Birthday</button>
+      <button type="button" data-filter="wedding" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Wedding</button>
+      <button type="button" data-filter="custom" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Custom Themes</button>
+      <button type="button" data-filter="anniversary" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Anniversary</button>
+      <button type="button" data-filter="babyshower" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Baby Showers</button>
+      <button type="button" data-filter="corporate" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Corporate Events</button>
+      <button type="button" data-filter="cupcake" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Cupcakes</button>
+      <button type="button" data-filter="seasonal" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Seasonal</button>
+    </div>
+
+    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+
+      <div id="birthday" data-filter-item data-categories="birthday" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Golden confetti birthday cake with candles" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Birthday</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Golden Confetti Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$58</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">6" round, vanilla sponge, rainbow confetti, serves 10.</p>
+          <a href="order.html?occasion=Birthday" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="birthday,custom" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1695275673485-8d3ef4965615?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Cake decorated with a fondant dinosaur figure and tropical leaves" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Birthday · Custom</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Dinosaur Adventure Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $72</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Hand-sculpted fondant scene, any character theme welcome.</p>
+          <a href="order.html?occasion=Birthday" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="birthday" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Superhero themed birthday cake with hand-painted comic details" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Birthday</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Superhero Squad Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$62</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Hand-painted comic-style scene starring your child's favorite hero.</p>
+          <a href="order.html?occasion=Birthday" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="birthday" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1541844053589-346841d0b34c?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Pastel unicorn birthday cake with edible horn and mane" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Birthday</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Unicorn Dream Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$65</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Pastel rainbow layers topped with an edible unicorn horn and mane.</p>
+          <a href="order.html?occasion=Birthday" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="birthday" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1626803775151-61d756612f97?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Oversized number-shaped birthday cake filled with fresh fruit" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Birthday</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Number Cake Topper</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$54</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Oversized cookie-cake number filled with fresh fruit and cream.</p>
+          <a href="order.html?occasion=Birthday" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="wedding" data-filter-item data-categories="wedding" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Classic vanilla buttercream wedding cake with floral piping" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Wedding</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Classic Buttercream Tier</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $8/serv.</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Smooth buttercream tiers with piped floral detail, tasting included.</p>
+          <a href="order.html?occasion=Wedding" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="wedding" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1604702433171-33756f3f3825?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Rustic naked wedding cake with fresh flowers" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Wedding</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Rustic Naked Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $9/serv.</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Semi-frosted tiers finished with fresh seasonal blooms.</p>
+          <a href="order.html?occasion=Wedding" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="wedding" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1557979619-445218f326b9?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Ivory wedding cake with hand-piped lace buttercream detail" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Wedding</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Ivory Lace Tier</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $9/serv.</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Hand-piped lace detailing over a soft ivory buttercream base.</p>
+          <a href="order.html?occasion=Wedding" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="wedding" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Modern wedding cake with gold drip finish over dark chocolate" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Wedding</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Metallic Drip Tier</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $10/serv.</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Gold drip finish over dark chocolate ganache — a modern statement piece.</p>
+          <a href="order.html?occasion=Wedding" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="wedding" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Blush ombre wedding cake cascading with sugar garden roses" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Wedding</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Garden Rose Tier</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $9.50/serv.</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Cascading sugar roses over a blush ombre buttercream finish.</p>
+          <a href="order.html?occasion=Wedding" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="custom" data-filter-item data-categories="custom" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1554922735-c09cab077e35?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Cake hand-painted with a pastel watercolor buttercream design" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Custom</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Hand-Painted Art Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $95</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Hand-painted watercolor buttercream art, custom colors to match your theme.</p>
+          <a href="order.html?occasion=Custom%20Theme" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="custom" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1583041270514-f2daa9ffc6d7?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Sculpted fondant cake shaped like a fantasy castle" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Custom</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Sculpted Fondant Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $110</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">3D sculpted shapes — any theme, built on a sturdy internal frame.</p>
+          <a href="order.html?occasion=Custom%20Theme" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="anniversary" data-filter-item data-categories="anniversary" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1688634231525-085e299c249f?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Rose gold anniversary cake topped with fresh berries" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Anniversary</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Rose Gold Anniversary Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$85</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Champagne sponge with berry compote and edible gold leaf.</p>
+          <a href="order.html?occasion=Anniversary" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="anniversary" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1533050487297-09b450131914?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Champagne sponge anniversary cake finished with edible gold leaf" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Anniversary</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Golden Vow Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$88</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">24k edible gold leaf over champagne sponge, marking every golden year.</p>
+          <a href="order.html?occasion=Anniversary" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="anniversary" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1577303935007-0d306ee638cf?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Red velvet anniversary cake with cream cheese frosting and rose petals" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Anniversary</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Red Velvet Romance</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$80</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Classic red velvet with cream cheese frosting and fresh rose petals.</p>
+          <a href="order.html?occasion=Anniversary" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="anniversary" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1546069901-eacef0df6022?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Dark chocolate anniversary cake with a sparkling sugar drizzle" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Anniversary</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Midnight Chocolate Toast</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$92</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Deep dark chocolate layers finished with a sparkling sugar drizzle.</p>
+          <a href="order.html?occasion=Anniversary" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="anniversary" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1543007630-9710e4a00a20?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Silver-dusted anniversary cake celebrating twenty-five years together" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Anniversary</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Silver Jubilee Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$86</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Silver-dusted vanilla bean cake celebrating 25 years of togetherness.</p>
+          <a href="order.html?occasion=Anniversary" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="anniversary" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1597520595747-23260411dc4e?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Pink ombre rose-piped cake with matching rose cupcakes" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Anniversary</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Eternal Rose Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$90</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Delicate sugar rose cascade over a soft blush buttercream base.</p>
+          <a href="order.html?occasion=Anniversary" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="anniversary" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1547736809-6d7227d324d3?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Cake piped with XO and tiny hearts, love-letter style" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Anniversary</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Vintage Love Letter Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$84</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Nostalgic hand-piped script details inspired by a handwritten love note.</p>
+          <a href="order.html?occasion=Anniversary" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="babyshower" data-filter-item data-categories="babyshower" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1579736283361-4008b21c7ed6?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Pastel baby shower cake decorated with sugar flowers" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Baby Shower</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Pastel Bloom Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$68</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Soft pastel ombre with hand-piped sugar florals.</p>
+          <a href="order.html?occasion=Baby%20Shower" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="babyshower" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1558636508-e0db3814bd1d?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Pastel baby shower cake with delicate baby footprint detailing" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Baby Shower</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Little Feet Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$70</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Soft blue or pink fondant with delicate baby footprint detailing.</p>
+          <a href="order.html?occasion=Baby%20Shower" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="babyshower" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1508737027454-e6454ef45afd?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Whimsical cloud-shaped baby shower cake with edible stars" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Baby Shower</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Storybook Cloud Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$72</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Dreamy cloud-shaped tiers with edible stars for a whimsical welcome.</p>
+          <a href="order.html?occasion=Baby%20Shower" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="babyshower" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="White buttercream gender reveal cake sliced to show colored filling" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Baby Shower</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Gender Reveal Surprise</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$75</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Reveal pink or blue filling inside a classic white buttercream shell.</p>
+          <a href="order.html?occasion=Baby%20Shower" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="corporate" data-filter-item data-categories="corporate" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1742890184772-d2eda8e03de1?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Two-tier cake with edible branded logo toppers" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Corporate</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Branded Logo Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $65</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Edible logo print, serves 20–40, bulk pricing available.</p>
+          <a href="order.html?occasion=Corporate%20Event" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="corporate" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Full sheet cake with edible color print for a corporate product launch" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Corporate</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Product Launch Sheet Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $70</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Full-color edible print sheet cake sized for large team celebrations.</p>
+          <a href="order.html?occasion=Corporate%20Event" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="corporate" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Elegant tiered cake branded for a company milestone anniversary" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Corporate</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Milestone Anniversary Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $75</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Elegant tiered cake branded with your company's founding year.</p>
+          <a href="order.html?occasion=Corporate%20Event" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="corporate" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Assorted bite-sized mini cakes for a conference dessert table" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Corporate</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Conference Dessert Bites</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $3.50 ea.</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Bite-sized mini cakes ideal for conference and seminar dessert tables.</p>
+          <a href="order.html?occasion=Corporate%20Event" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="cupcake" data-filter-item data-categories="cupcake" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1623246123320-0d6636755796?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Brown butter cupcakes drizzled with salted caramel and topped with a wafer" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Cupcakes</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Salted Caramel Box (12)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$42</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Brown butter cupcakes filled with salted caramel core.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="cupcake" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1614707269211-474b2510b3ad?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Box of red velvet cupcakes with cream cheese frosting" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Cupcakes</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Red Velvet Box (12)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$42</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Cocoa-buttermilk cupcakes topped with cream cheese swirl.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="cupcake" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Box of chocolate fudge cupcakes with cocoa buttercream" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Cupcakes</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Chocolate Fudge Box (12)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$44</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Double-chocolate cupcakes with a molten fudge center and cocoa buttercream.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="cupcake" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Box of pastel frosted cupcakes with sprinkles" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Cupcakes</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Matcha White Chocolate Box (12)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$46</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Green tea sponge cupcakes swirled with white chocolate ganache.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="cupcake" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Box of lemon blueberry cupcakes with citrus buttercream" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Cupcakes</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Lemon Blueberry Box (12)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$45</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Zesty lemon cupcakes swirled with blueberry compote and lemon buttercream.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="cupcake" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Box of cookies and cream cupcakes with vanilla buttercream" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Cupcakes</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Cookies &amp; Cream Box (12)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$45</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Crushed chocolate sandwich cookies folded into vanilla buttercream.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="cupcake" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1595587870672-c79b47875c6a?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Box of strawberry shortcake cupcakes with whipped mascarpone" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Cupcakes</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Strawberry Shortcake Box (12)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$47</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Fresh strawberry compote, vanilla sponge, and whipped mascarpone.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="cupcake" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1497534446932-c925b458314e?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Box of pistachio rose cupcakes with candied petals" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Cupcakes</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Pistachio Rose Box (12)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$48</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Pistachio sponge with rosewater buttercream and candied petals.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="seasonal" data-filter-item data-categories="seasonal" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Seasonal spiced cake slice with cinnamon dusting" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Seasonal · Fall</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Pumpkin Spice Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$55</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Warm spiced sponge with brown-butter cream cheese frosting.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="seasonal" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1481391319762-47dff72954d9?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Peppermint mocha layer cake dusted with crushed candy cane" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Seasonal · Winter</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Peppermint Mocha Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$58</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Espresso sponge, peppermint cream, and crushed candy cane.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="seasonal" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Spiced gingerbread cake with cream cheese frosting" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Seasonal · Winter</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Gingerbread Spice Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$56</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Molasses gingerbread sponge, cream cheese frosting, cinnamon dust.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="seasonal" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1568820780293-f33ebe8c49ed?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Rustic cinnamon apple crumble cake with fresh apples" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Seasonal · Fall</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Cinnamon Apple Crumble</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$54</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Spiced apple sponge layered with buttery crumble and cinnamon cream.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="seasonal" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Eggnog spice cake with nutmeg buttercream" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Seasonal · Winter</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Eggnog Spice Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$57</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Nutmeg-spiced sponge with eggnog buttercream, dusted with cinnamon.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="seasonal" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Cranberry orange cake with vanilla cream cheese frosting" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Seasonal · Holiday</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Cranberry Orange Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$56</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Orange-zest sponge with cranberry curd and vanilla cream cheese frosting.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="seasonal" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Maple pecan cake topped with candied pecans" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Seasonal · Fall</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Maple Pecan Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$58</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Brown butter maple sponge topped with candied pecans.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="seasonal" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1561924607-7e9b21fb51ec?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Strawberry rhubarb cake topped with fresh sliced strawberries" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-caramel-600 dark:text-caramel-300 uppercase tracking-wide">Seasonal · Spring</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Strawberry Rhubarb Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$55</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Sweet-tart rhubarb compote layered with strawberry mousse.</p>
+          <a href="order.html" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-4">
+      <p class="text-sm text-choco-500 dark:text-cream-300 mt-10" data-aos="fade-up">Don't see exactly what you're picturing? <a href="order.html" class="text-raspberry-600 dark:text-caramel-400 font-semibold underline">Describe your custom cake here</a> and we'll design it from scratch.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative bg-choco-900 text-cream-200">
+  <div class="scallop-top" style="--scallop-color:#1F150E;"></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-14 pb-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <span class="font-display text-2xl font-semibold text-white">Bloom &amp; Batter</span>
+        <p class="text-sm text-cream-400 mt-3">Handcrafted cakes for birthdays, weddings, and everything worth celebrating — baked fresh in Riverdale since 2011.</p>
+        <div class="flex items-center gap-3 mt-5">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Pinterest" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Quick Links</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-cream-400">
+          <li><a href="about.html" class="hover:text-caramel-300 transition">Our Story</a></li>
+          <li><a href="menu.html" class="hover:text-caramel-300 transition">Menu</a></li>
+          <li><a href="gallery.html" class="hover:text-caramel-300 transition">Gallery</a></li>
+          <li><a href="faq.html" class="hover:text-caramel-300 transition">FAQ</a></li>
+          <li><a href="contact.html" class="hover:text-caramel-300 transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Occasions</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-cream-400">
+          <li><a href="menu.html#birthday" class="hover:text-caramel-300 transition">Birthday Cakes</a></li>
+          <li><a href="menu.html#wedding" class="hover:text-caramel-300 transition">Wedding Cakes</a></li>
+          <li><a href="menu.html#custom" class="hover:text-caramel-300 transition">Custom Themes</a></li>
+          <li><a href="order.html" class="hover:text-caramel-300 transition">Custom Enquiry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Stay Sweetly Updated</h3>
+        <p class="text-sm text-cream-400 mt-4">Get seasonal flavors and limited slots in your inbox.</p>
+        <form data-newsletter class="mt-4 flex gap-2">
+          <label for="footer-newsletter" class="sr-only">Email address</label>
+          <input id="footer-newsletter" type="email" required placeholder="you@example.com" class="min-w-0 flex-1 px-4 py-2.5 rounded-full bg-white/10 border border-white/20 text-sm text-white placeholder:text-cream-400 focus:outline-none focus:border-caramel-400">
+          <button type="submit" class="w-11 h-11 shrink-0 rounded-full bg-raspberry-600 grid place-items-center hover:bg-raspberry-500 transition" aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane text-sm" aria-hidden="true"></i>
+          </button>
+        </form>
+        <p data-newsletter-msg class="text-xs mt-2 hidden" role="status"></p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream-500">
+      <p>&copy; 2026 Bloom &amp; Batter Cake Studio. All rights reserved.</p>
+      <p>212 Magnolia Ave, Riverdale &middot; Open Tue–Sun, 8am–6pm</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" type="button" aria-label="Back to top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-12 h-12 rounded-full bg-raspberry-600 text-white shadow-lg grid place-items-center hover:bg-raspberry-500">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | Bloom & Batter Cake Studio</title>
+<meta name="description" content="Answers to common questions about ordering, customizing, picking up, delivering, and paying for cakes from Bloom & Batter Cake Studio.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%82%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          raspberry: {50:'#FDF2F4',100:'#FBE4E9',200:'#F6C1CE',300:'#F09DB0',400:'#DF5A79',500:'#C9184A',600:'#B4123F',700:'#8F0E33',800:'#6B0A26',900:'#4A071B'},
+          caramel: {50:'#FFF8F0',100:'#FEEEDB',200:'#FCD9AE',300:'#FAC480',400:'#F7AE61',500:'#F4A261',600:'#E07E2F',700:'#B5621F',800:'#8A4A17',900:'#5F3210'},
+          cream: {50:'#FFFDFB',100:'#FFF8F0',200:'#FFF1E0',300:'#FCE4EC',400:'#F9D8DE'},
+          choco: {50:'#F5EFEA',100:'#E7DAD0',200:'#C9B3A2',300:'#A3806A',400:'#7A5A45',500:'#5A3E2C',600:'#4A3221',700:'#3D2B1F',800:'#2E2016',900:'#1F150E'}
+        },
+        fontFamily: { display: ['Fraunces','serif'], script: ['Caveat','cursive'], body: ['Poppins','sans-serif'] },
+        boxShadow: { soft: '0 20px 45px -15px rgba(201,24,74,.25)' }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-body bg-cream-100 text-choco-700 dark:bg-choco-900 dark:text-cream-100 antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] bg-raspberry-600 text-white px-4 py-2 rounded-lg">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between gap-2 h-20 lg:h-24">
+      <a href="index.html" class="group flex items-center shrink-0 min-w-0" aria-label="Bloom & Batter home">
+        <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom & Batter Cake Studio logo" class="h-16 lg:h-20 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300">
+      </a>
+
+      <nav class="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-6 px-4" aria-label="Primary">
+        <div class="relative" data-dropdown>
+          <button type="button" data-dropdown-trigger aria-haspopup="true" aria-expanded="false" class="inline-flex items-center gap-1.5 font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
+            Home <i data-dropdown-caret class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
+          </button>
+          <div data-dropdown-panel class="hidden absolute left-0 rtl:left-auto rtl:right-0 top-full mt-3 w-48 bg-white dark:bg-choco-800 rounded-xl shadow-soft border border-choco-100 dark:border-choco-700 py-2 z-50" role="menu">
+            <a href="index.html" data-nav-link role="menuitem" class="block px-4 py-2.5 text-sm text-choco-700 dark:text-cream-100 hover:bg-cream-100 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 1</a>
+            <a href="home-1.html" data-nav-link role="menuitem" class="block px-4 py-2.5 text-sm text-choco-700 dark:text-cream-100 hover:bg-cream-100 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 2</a>
+          </div>
+        </div>
+        <a href="about.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">About</a>
+        <a href="menu.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Menu</a>
+        <a href="gallery.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Gallery</a>
+        <a href="faq.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">FAQ</a>
+        <a href="contact.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
+        <button data-theme-toggle type="button" aria-label="Toggle dark mode" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition shrink-0">
+          <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
+        </button>
+        <button data-dir-toggle type="button" aria-label="Toggle text direction" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition text-xs font-semibold shrink-0">
+          <span data-dir-label>RTL</span>
+        </button>
+        <a href="order.html" class="btn-header-cta hidden xl:inline-flex items-center gap-2 text-white text-sm font-bold px-6 py-3 rounded-full whitespace-nowrap shrink-0">
+          <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Order Now
+          <i class="fa-solid fa-arrow-right cta-arrow rtl:rotate-180" aria-hidden="true"></i>
+        </a>
+        <button id="drawer-open" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu" class="xl:hidden w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 shrink-0">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MOBILE DRAWER ===================== -->
+<div id="drawer-backdrop" class="fixed inset-0 bg-choco-900/60 z-[60]"></div>
+<aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-[86%] max-w-sm bg-cream-50 dark:bg-choco-900 z-[70] shadow-2xl p-6 flex flex-col" aria-label="Mobile navigation">
+  <div class="flex items-center justify-between mb-8">
+    <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom &amp; Batter Cake Studio logo" class="h-14 w-auto object-contain drop-shadow-sm">
+    <button id="drawer-close" type="button" aria-label="Close menu" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200 dark:bg-choco-800 text-choco-700 dark:text-cream-100">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-1 text-lg" aria-label="Mobile primary">
+    <a href="index.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 1</a>
+    <a href="home-1.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 2</a>
+    <a href="about.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">About</a>
+    <a href="menu.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Menu</a>
+    <a href="gallery.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Gallery</a>
+    <a href="order.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Custom Order</a>
+    <a href="faq.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">FAQ</a>
+    <a href="contact.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Contact</a>
+  </nav>
+  <div class="mt-6 flex items-center gap-3">
+    <button data-theme-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+      <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span> Theme
+    </button>
+    <button data-dir-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+      <i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> <span data-dir-label>RTL</span>
+    </button>
+  </div>
+  <a href="order.html" class="btn-primary mt-4 text-center text-white font-semibold py-3 rounded-full">Order a Custom Cake</a>
+  <div class="mt-auto pt-6 text-sm text-choco-500 dark:text-cream-300">
+    <p><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>+1 (555) 214-6688</p>
+    <p class="mt-1"><i class="fa-solid fa-location-dot mr-2" aria-hidden="true"></i>212 Magnolia Ave, Riverdale</p>
+  </div>
+</aside>
+
+<main id="main-content">
+<!-- ===================== INNER HERO ===================== -->
+<section class="relative pt-40 pb-20 lg:pt-48 lg:pb-24 bg-caramel-500 overflow-hidden">
+  <div class="absolute inset-0 sprinkle-bg !text-white !opacity-10" aria-hidden="true"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-raspberry-600/20 blur-3xl blob-b" aria-hidden="true"></div>
+  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center">
+    <nav aria-label="Breadcrumb" class="flex items-center justify-center gap-2 text-sm text-white/80">
+      <a href="index.html" class="hover:text-white">Home</a>
+      <i class="fa-solid fa-chevron-right rtl:rotate-180 text-[10px]" aria-hidden="true"></i>
+      <span aria-current="page" class="text-white">FAQ</span>
+    </nav>
+    <h1 class="font-display text-4xl lg:text-5xl font-semibold text-white mt-4">Frequently Asked Questions</h1>
+    <p class="text-white/90 mt-4 max-w-xl mx-auto">Everything you need to know about ordering, customizing, and picking up your cake.</p>
+  </div>
+</section>
+
+<!-- ===================== FAQ ACCORDION GROUPS ===================== -->
+<section class="py-20 lg:py-24">
+  <div class="max-w-3xl mx-auto px-5 lg:px-8 space-y-14">
+
+    <div data-aos="fade-up">
+      <h2 class="font-display text-2xl font-semibold flex items-center gap-3">
+        <span class="w-9 h-9 rounded-full bg-raspberry-100 dark:bg-raspberry-900/40 text-raspberry-600 dark:text-caramel-300 grid place-items-center text-sm"><i class="fa-solid fa-cake-candles" aria-hidden="true"></i></span>
+        Ordering
+      </h2>
+      <div class="mt-5 space-y-3" data-faq-group>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            How far in advance should I order?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">Standard cakes need 5 days notice. Wedding and multi-tier custom cakes should be booked 4–6 weeks ahead, especially during peak season (May–October).</p>
+          </div>
+        </div>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            Can I place a rush order?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">We occasionally accommodate 48-hour rush orders for simpler designs, subject to a rush fee. Call the studio directly rather than using the online form for these.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            How do I get a price quote?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">Submit our <a href="order.html" class="text-raspberry-600 dark:text-caramel-400 underline">custom cake enquiry form</a> with your occasion, servings, and design details. We reply with a fixed quote within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <h2 class="font-display text-2xl font-semibold flex items-center gap-3">
+        <span class="w-9 h-9 rounded-full bg-caramel-100 dark:bg-caramel-900/40 text-caramel-600 dark:text-caramel-300 grid place-items-center text-sm"><i class="fa-solid fa-palette" aria-hidden="true"></i></span>
+        Customization
+      </h2>
+      <div class="mt-5 space-y-3" data-faq-group>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            Can you recreate a design from a photo?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">Yes — attach a reference image on the enquiry form and our decorators will sketch a matching (or improved) concept before baking begins.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            Do you offer gluten-free or vegan options?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">Yes, our citrus olive oil cake is naturally gluten-free, and most designs can be adapted to dairy-free or egg-free recipes with advance notice.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            Can I mix flavors between tiers?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">Absolutely — most multi-tier orders mix two or three flavors. Just note your preference in the design description field of the enquiry form.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <h2 class="font-display text-2xl font-semibold flex items-center gap-3">
+        <span class="w-9 h-9 rounded-full bg-raspberry-100 dark:bg-raspberry-900/40 text-raspberry-600 dark:text-caramel-300 grid place-items-center text-sm"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></span>
+        Delivery &amp; Pickup
+      </h2>
+      <div class="mt-5 space-y-3" data-faq-group>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            Do you deliver outside Riverdale?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">We deliver within a 15-mile radius of Riverdale for a flat fee. Longer distances may be arranged for wedding cakes — ask when you submit your enquiry.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            What if I need to change my pickup date?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">Contact us at least 48 hours before your original date and we'll do our best to accommodate the change, subject to availability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-aos="fade-up">
+      <h2 class="font-display text-2xl font-semibold flex items-center gap-3">
+        <span class="w-9 h-9 rounded-full bg-caramel-100 dark:bg-caramel-900/40 text-caramel-600 dark:text-caramel-300 grid place-items-center text-sm"><i class="fa-solid fa-credit-card" aria-hidden="true"></i></span>
+        Payment
+      </h2>
+      <div class="mt-5 space-y-3" data-faq-group>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            How does the deposit work?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">A 30% non-refundable deposit confirms your order and locks in your pickup date. The remaining balance is due at pickup or delivery.</p>
+          </div>
+        </div>
+        <div class="faq-item border border-choco-100 dark:border-choco-700 rounded-2xl overflow-hidden">
+          <button type="button" class="faq-trigger w-full flex items-center justify-between gap-4 px-5 py-4 text-left font-semibold" aria-expanded="false">
+            What payment methods do you accept?
+            <i class="fa-solid fa-plus faq-icon text-raspberry-600 dark:text-caramel-400" aria-hidden="true"></i>
+          </button>
+          <div class="faq-panel px-5 text-sm text-choco-500 dark:text-cream-300">
+            <p class="pb-4">We accept all major credit cards, Apple Pay, and bank transfer. Cash is welcome for in-store pickup orders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===================== CTA ===================== -->
+<section class="pb-20 lg:pb-24">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8 text-center" data-aos="fade-up">
+    <p class="font-display text-2xl font-semibold">Still have a question?</p>
+    <p class="text-choco-500 dark:text-cream-300 mt-2">Our team is happy to help you plan the perfect cake.</p>
+    <a href="contact.html" class="btn-primary inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-full mt-6">
+      <i class="fa-solid fa-comments" aria-hidden="true"></i> Contact Us
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative bg-choco-900 text-cream-200">
+  <div class="scallop-top" style="--scallop-color:#1F150E;"></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-14 pb-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <span class="font-display text-2xl font-semibold text-white">Bloom &amp; Batter</span>
+        <p class="text-sm text-cream-400 mt-3">Handcrafted cakes for birthdays, weddings, and everything worth celebrating — baked fresh in Riverdale since 2011.</p>
+        <div class="flex items-center gap-3 mt-5">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Pinterest" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Quick Links</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-cream-400">
+          <li><a href="about.html" class="hover:text-caramel-300 transition">Our Story</a></li>
+          <li><a href="menu.html" class="hover:text-caramel-300 transition">Menu</a></li>
+          <li><a href="gallery.html" class="hover:text-caramel-300 transition">Gallery</a></li>
+          <li><a href="faq.html" class="hover:text-caramel-300 transition">FAQ</a></li>
+          <li><a href="contact.html" class="hover:text-caramel-300 transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Occasions</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-cream-400">
+          <li><a href="menu.html#birthday" class="hover:text-caramel-300 transition">Birthday Cakes</a></li>
+          <li><a href="menu.html#wedding" class="hover:text-caramel-300 transition">Wedding Cakes</a></li>
+          <li><a href="menu.html#custom" class="hover:text-caramel-300 transition">Custom Themes</a></li>
+          <li><a href="order.html" class="hover:text-caramel-300 transition">Custom Enquiry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Stay Sweetly Updated</h3>
+        <p class="text-sm text-cream-400 mt-4">Get seasonal flavors and limited slots in your inbox.</p>
+        <form data-newsletter class="mt-4 flex gap-2">
+          <label for="footer-newsletter" class="sr-only">Email address</label>
+          <input id="footer-newsletter" type="email" required placeholder="you@example.com" class="min-w-0 flex-1 px-4 py-2.5 rounded-full bg-white/10 border border-white/20 text-sm text-white placeholder:text-cream-400 focus:outline-none focus:border-caramel-400">
+          <button type="submit" class="w-11 h-11 shrink-0 rounded-full bg-raspberry-600 grid place-items-center hover:bg-raspberry-500 transition" aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane text-sm" aria-hidden="true"></i>
+          </button>
+        </form>
+        <p data-newsletter-msg class="text-xs mt-2 hidden" role="status"></p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream-500">
+      <p>&copy; 2026 Bloom &amp; Batter Cake Studio. All rights reserved.</p>
+      <p>212 Magnolia Ave, Riverdale &middot; Open Tue–Sun, 8am–6pm</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" type="button" aria-label="Back to top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-12 h-12 rounded-full bg-raspberry-600 text-white shadow-lg grid place-items-center hover:bg-raspberry-500">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Bloom & Batter Cake Studio</title>
+<meta name="description" content="Get in touch with Bloom & Batter Cake Studio — visit our Riverdale storefront, call, email, or send a message about your next cake order.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%82%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          raspberry: {50:'#FDF2F4',100:'#FBE4E9',200:'#F6C1CE',300:'#F09DB0',400:'#DF5A79',500:'#C9184A',600:'#B4123F',700:'#8F0E33',800:'#6B0A26',900:'#4A071B'},
+          caramel: {50:'#FFF8F0',100:'#FEEEDB',200:'#FCD9AE',300:'#FAC480',400:'#F7AE61',500:'#F4A261',600:'#E07E2F',700:'#B5621F',800:'#8A4A17',900:'#5F3210'},
+          cream: {50:'#FFFDFB',100:'#FFF8F0',200:'#FFF1E0',300:'#FCE4EC',400:'#F9D8DE'},
+          choco: {50:'#F5EFEA',100:'#E7DAD0',200:'#C9B3A2',300:'#A3806A',400:'#7A5A45',500:'#5A3E2C',600:'#4A3221',700:'#3D2B1F',800:'#2E2016',900:'#1F150E'}
+        },
+        fontFamily: { display: ['Fraunces','serif'], script: ['Caveat','cursive'], body: ['Poppins','sans-serif'] },
+        boxShadow: { soft: '0 20px 45px -15px rgba(201,24,74,.25)' }
+      }
+    }
+  }
+</script>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="font-body bg-cream-100 text-choco-700 dark:bg-choco-900 dark:text-cream-100 antialiased">
+
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] bg-raspberry-600 text-white px-4 py-2 rounded-lg">Skip to content</a>
+
+<!-- ===================== HEADER ===================== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50">
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+    <div class="flex items-center justify-between gap-2 h-20 lg:h-24">
+      <a href="index.html" class="group flex items-center shrink-0 min-w-0" aria-label="Bloom & Batter home">
+        <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom & Batter Cake Studio logo" class="h-16 lg:h-20 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300">
+      </a>
+
+      <nav class="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-6 px-4" aria-label="Primary">
+        <div class="relative" data-dropdown>
+          <button type="button" data-dropdown-trigger aria-haspopup="true" aria-expanded="false" class="inline-flex items-center gap-1.5 font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
+            Home <i data-dropdown-caret class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
+          </button>
+          <div data-dropdown-panel class="hidden absolute left-0 rtl:left-auto rtl:right-0 top-full mt-3 w-48 bg-white dark:bg-choco-800 rounded-xl shadow-soft border border-choco-100 dark:border-choco-700 py-2 z-50" role="menu">
+            <a href="index.html" data-nav-link role="menuitem" class="block px-4 py-2.5 text-sm text-choco-700 dark:text-cream-100 hover:bg-cream-100 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 1</a>
+            <a href="home-1.html" data-nav-link role="menuitem" class="block px-4 py-2.5 text-sm text-choco-700 dark:text-cream-100 hover:bg-cream-100 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 2</a>
+          </div>
+        </div>
+        <a href="about.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">About</a>
+        <a href="menu.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Menu</a>
+        <a href="gallery.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Gallery</a>
+        <a href="faq.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">FAQ</a>
+        <a href="contact.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
+        <button data-theme-toggle type="button" aria-label="Toggle dark mode" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition shrink-0">
+          <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
+        </button>
+        <button data-dir-toggle type="button" aria-label="Toggle text direction" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition text-xs font-semibold shrink-0">
+          <span data-dir-label>RTL</span>
+        </button>
+        <a href="order.html" class="btn-header-cta hidden xl:inline-flex items-center gap-2 text-white text-sm font-bold px-6 py-3 rounded-full whitespace-nowrap shrink-0">
+          <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Order Now
+          <i class="fa-solid fa-arrow-right cta-arrow rtl:rotate-180" aria-hidden="true"></i>
+        </a>
+        <button id="drawer-open" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu" class="xl:hidden w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 shrink-0">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== MOBILE DRAWER ===================== -->
+<div id="drawer-backdrop" class="fixed inset-0 bg-choco-900/60 z-[60]"></div>
+<aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-[86%] max-w-sm bg-cream-50 dark:bg-choco-900 z-[70] shadow-2xl p-6 flex flex-col" aria-label="Mobile navigation">
+  <div class="flex items-center justify-between mb-8">
+    <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom &amp; Batter Cake Studio logo" class="h-14 w-auto object-contain drop-shadow-sm">
+    <button id="drawer-close" type="button" aria-label="Close menu" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200 dark:bg-choco-800 text-choco-700 dark:text-cream-100">
+      <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-1 text-lg" aria-label="Mobile primary">
+    <a href="index.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 1</a>
+    <a href="home-1.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 2</a>
+    <a href="about.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">About</a>
+    <a href="menu.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Menu</a>
+    <a href="gallery.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Gallery</a>
+    <a href="order.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Custom Order</a>
+    <a href="faq.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">FAQ</a>
+    <a href="contact.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Contact</a>
+  </nav>
+  <div class="mt-6 flex items-center gap-3">
+    <button data-theme-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+      <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span> Theme
+    </button>
+    <button data-dir-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+      <i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> <span data-dir-label>RTL</span>
+    </button>
+  </div>
+  <a href="order.html" class="btn-primary mt-4 text-center text-white font-semibold py-3 rounded-full">Order a Custom Cake</a>
+  <div class="mt-auto pt-6 text-sm text-choco-500 dark:text-cream-300">
+    <p><i class="fa-solid fa-phone mr-2" aria-hidden="true"></i>+1 (555) 214-6688</p>
+    <p class="mt-1"><i class="fa-solid fa-location-dot mr-2" aria-hidden="true"></i>212 Magnolia Ave, Riverdale</p>
+  </div>
+</aside>
+
+<main id="main-content">
+<!-- ===================== INNER HERO ===================== -->
+<section class="relative pt-40 pb-20 lg:pt-48 lg:pb-24 overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1600&q=80&auto=format&fit=crop" data-fallback alt="Bloom & Batter storefront on Magnolia Avenue" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-choco-900/90 to-choco-900/60"></div>
+  <div class="relative max-w-4xl mx-auto px-5 lg:px-8 text-center">
+    <nav aria-label="Breadcrumb" class="flex items-center justify-center gap-2 text-sm text-cream-200/80">
+      <a href="index.html" class="hover:text-white">Home</a>
+      <i class="fa-solid fa-chevron-right rtl:rotate-180 text-[10px]" aria-hidden="true"></i>
+      <span aria-current="page" class="text-white">Contact</span>
+    </nav>
+    <h1 class="font-display text-4xl lg:text-5xl font-semibold text-white mt-4">Let's Talk Cake</h1>
+    <p class="text-cream-200/90 mt-4 max-w-xl mx-auto">Stop by the studio, give us a call, or send a message — we usually reply within a few hours during business days.</p>
+  </div>
+</section>
+
+<!-- ===================== CONTACT INFO CARDS ===================== -->
+<div class="max-w-6xl mx-auto px-5 lg:px-8 -mt-10 relative z-10">
+  <div class="grid sm:grid-cols-3 gap-6">
+    <div data-aos="fade-up" class="bg-white dark:bg-choco-800 rounded-3xl shadow-soft p-6 text-center h-full flex flex-col justify-center">
+      <div class="w-12 h-12 mx-auto rounded-2xl bg-raspberry-100 dark:bg-raspberry-900/40 text-raspberry-600 dark:text-caramel-300 grid place-items-center text-lg mb-3">
+        <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+      </div>
+      <h3 class="font-display font-semibold">Visit the Studio</h3>
+      <p class="text-sm text-choco-500 dark:text-cream-300 mt-1">212 Magnolia Ave, Riverdale, RD 48210</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-choco-800 rounded-3xl shadow-soft p-6 text-center h-full flex flex-col justify-center">
+      <div class="w-12 h-12 mx-auto rounded-2xl bg-caramel-100 dark:bg-caramel-900/40 text-caramel-600 dark:text-caramel-300 grid place-items-center text-lg mb-3">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+      </div>
+      <h3 class="font-display font-semibold">Call or Email</h3>
+      <p class="text-sm text-choco-500 dark:text-cream-300 mt-1">+1 (555) 214-6688<br>orders@bloomandbatter.co</p>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="200" class="bg-white dark:bg-choco-800 rounded-3xl shadow-soft p-6 text-center h-full flex flex-col justify-center">
+      <div class="w-12 h-12 mx-auto rounded-2xl bg-raspberry-100 dark:bg-raspberry-900/40 text-raspberry-600 dark:text-caramel-300 grid place-items-center text-lg mb-3">
+        <i class="fa-solid fa-clock" aria-hidden="true"></i>
+      </div>
+      <h3 class="font-display font-semibold">Studio Hours</h3>
+      <p class="text-sm text-choco-500 dark:text-cream-300 mt-1">Tue – Sun: 8am – 6pm<br>Closed Mondays</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== MAP + FORM ===================== -->
+<section class="py-20 lg:py-24">
+  <div class="max-w-6xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-10 items-start">
+    <div data-aos="fade-right" class="relative rounded-3xl overflow-hidden shadow-sm h-[420px] bg-cream-100 dark:bg-choco-800">
+      <svg class="absolute inset-0 w-full h-full text-choco-900/10 dark:text-cream-100/10" aria-hidden="true">
+        <defs>
+          <pattern id="map-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#map-grid)"></rect>
+      </svg>
+      <div class="absolute top-8 left-8 h-2 w-24 rounded-full bg-choco-900/10 dark:bg-cream-100/10"></div>
+      <div class="absolute top-8 left-8 w-2 h-32 rounded-full bg-choco-900/10 dark:bg-cream-100/10"></div>
+      <div class="absolute bottom-16 right-12 h-2 w-32 rounded-full bg-choco-900/10 dark:bg-cream-100/10"></div>
+      <div class="absolute inset-0 flex flex-col items-center justify-center gap-4 px-6 text-center">
+        <span class="relative flex h-14 w-14 items-center justify-center">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-raspberry-400 opacity-40"></span>
+          <span class="relative inline-flex items-center justify-center h-14 w-14 rounded-full bg-raspberry-600 text-white shadow-lg text-xl">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          </span>
+        </span>
+        <div>
+          <p class="font-display font-semibold text-choco-900 dark:text-cream-100">Bloom &amp; Batter Cake Studio</p>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-1">212 Magnolia Ave, Riverdale, RD 48210</p>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&query=212+Magnolia+Ave%2C+Riverdale%2C+RD+48210" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 hover:gap-3 transition-all">
+          Get Directions <i class="fa-solid fa-arrow-right rtl:rotate-180" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+
+    <div data-aos="fade-left" class="bg-white dark:bg-choco-800 rounded-3xl shadow-sm p-8">
+
+      <div data-form-success tabindex="-1" class="hidden text-center py-6">
+        <div class="w-14 h-14 mx-auto rounded-full bg-green-100 dark:bg-green-900/40 text-green-600 dark:text-green-400 grid place-items-center text-xl">
+          <i class="fa-solid fa-check" aria-hidden="true"></i>
+        </div>
+        <h2 class="font-display text-xl font-semibold mt-4">Message Sent!</h2>
+        <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Thanks for reaching out — we'll get back to you within one business day.</p>
+      </div>
+
+      <form data-validate novalidate class="space-y-5" aria-label="Contact form">
+        <h2 class="font-display text-xl font-semibold">Send Us a Message</h2>
+        <p data-form-error-summary tabindex="-1" role="alert" class="hidden text-sm bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 border border-red-200 dark:border-red-800 rounded-xl px-4 py-3">
+          Please correct the highlighted fields below before submitting.
+        </p>
+        <div>
+          <label for="c-name" class="block text-sm font-semibold mb-1.5">Name *</label>
+          <input id="c-name" name="name" type="text" required data-label="Name" minlength="2" maxlength="80" class="w-full rounded-xl border border-choco-200 dark:border-choco-600 bg-cream-50 dark:bg-choco-900 px-4 py-2.5 focus:outline-none focus:border-raspberry-500" placeholder="Your full name">
+        </div>
+        <div>
+          <label for="c-email" class="block text-sm font-semibold mb-1.5">Email *</label>
+          <input id="c-email" name="email" type="email" required data-label="Email" class="w-full rounded-xl border border-choco-200 dark:border-choco-600 bg-cream-50 dark:bg-choco-900 px-4 py-2.5 focus:outline-none focus:border-raspberry-500" placeholder="you@example.com">
+        </div>
+        <div>
+          <label for="c-subject" class="block text-sm font-semibold mb-1.5">Subject *</label>
+          <select id="c-subject" name="subject" required data-label="Subject" class="w-full rounded-xl border border-choco-200 dark:border-choco-600 bg-cream-50 dark:bg-choco-900 px-4 py-2.5 focus:outline-none focus:border-raspberry-500">
+            <option value="">Select a topic</option>
+            <option>Custom Cake Question</option>
+            <option>Order Status</option>
+            <option>Wholesale / Corporate</option>
+            <option>Feedback</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="c-message" class="block text-sm font-semibold mb-1.5">Message *</label>
+          <textarea id="c-message" name="message" required data-label="Message" minlength="10" maxlength="600" rows="4" class="w-full rounded-xl border border-choco-200 dark:border-choco-600 bg-cream-50 dark:bg-choco-900 px-4 py-2.5 focus:outline-none focus:border-raspberry-500" placeholder="How can we help?"></textarea>
+        </div>
+        <button type="submit" class="btn-primary w-full sm:w-auto inline-flex items-center justify-center gap-2 text-white font-semibold px-8 py-3 rounded-full">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ TEASER ===================== -->
+<section class="pb-20 lg:pb-24">
+  <div class="max-w-4xl mx-auto px-5 lg:px-8 text-center" data-aos="fade-up">
+    <p class="text-choco-500 dark:text-cream-300">Have a quick question about ordering, pickup, or payment?</p>
+    <a href="faq.html" class="inline-flex items-center gap-2 font-semibold text-raspberry-600 dark:text-caramel-400 mt-2 hover:gap-3 transition-all">
+      Browse our FAQ <i class="fa-solid fa-arrow-right rtl:rotate-180" aria-hidden="true"></i>
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="relative bg-choco-900 text-cream-200">
+  <div class="scallop-top" style="--scallop-color:#1F150E;"></div>
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 pt-14 pb-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <span class="font-display text-2xl font-semibold text-white">Bloom &amp; Batter</span>
+        <p class="text-sm text-cream-400 mt-3">Handcrafted cakes for birthdays, weddings, and everything worth celebrating — baked fresh in Riverdale since 2011.</p>
+        <div class="flex items-center gap-3 mt-5">
+          <a href="#" aria-label="Instagram" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Facebook" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Pinterest" class="w-9 h-9 rounded-full bg-white/10 grid place-items-center hover:bg-raspberry-600 transition"><i class="fa-brands fa-pinterest-p" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Quick Links</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-cream-400">
+          <li><a href="about.html" class="hover:text-caramel-300 transition">Our Story</a></li>
+          <li><a href="menu.html" class="hover:text-caramel-300 transition">Menu</a></li>
+          <li><a href="gallery.html" class="hover:text-caramel-300 transition">Gallery</a></li>
+          <li><a href="faq.html" class="hover:text-caramel-300 transition">FAQ</a></li>
+          <li><a href="contact.html" class="hover:text-caramel-300 transition">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Occasions</h3>
+        <ul class="mt-4 space-y-2.5 text-sm text-cream-400">
+          <li><a href="menu.html#birthday" class="hover:text-caramel-300 transition">Birthday Cakes</a></li>
+          <li><a href="menu.html#wedding" class="hover:text-caramel-300 transition">Wedding Cakes</a></li>
+          <li><a href="menu.html#custom" class="hover:text-caramel-300 transition">Custom Themes</a></li>
+          <li><a href="order.html" class="hover:text-caramel-300 transition">Custom Enquiry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-display text-lg font-semibold text-white">Stay Sweetly Updated</h3>
+        <p class="text-sm text-cream-400 mt-4">Get seasonal flavors and limited slots in your inbox.</p>
+        <form data-newsletter class="mt-4 flex gap-2">
+          <label for="footer-newsletter" class="sr-only">Email address</label>
+          <input id="footer-newsletter" type="email" required placeholder="you@example.com" class="min-w-0 flex-1 px-4 py-2.5 rounded-full bg-white/10 border border-white/20 text-sm text-white placeholder:text-cream-400 focus:outline-none focus:border-caramel-400">
+          <button type="submit" class="w-11 h-11 shrink-0 rounded-full bg-raspberry-600 grid place-items-center hover:bg-raspberry-500 transition" aria-label="Subscribe">
+            <i class="fa-solid fa-paper-plane text-sm" aria-hidden="true"></i>
+          </button>
+        </form>
+        <p data-newsletter-msg class="text-xs mt-2 hidden" role="status"></p>
+      </div>
+    </div>
+    <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream-500">
+      <p>&copy; 2026 Bloom &amp; Batter Cake Studio. All rights reserved.</p>
+      <p>212 Magnolia Ave, Riverdale &middot; Open Tue–Sun, 8am–6pm</p>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" type="button" aria-label="Back to top" class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-40 w-12 h-12 rounded-full bg-raspberry-600 text-white shadow-lg grid place-items-center hover:bg-raspberry-500">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
