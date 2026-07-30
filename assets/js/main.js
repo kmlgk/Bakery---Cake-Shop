@@ -251,11 +251,22 @@ document.addEventListener('DOMContentLoaded', function () {
       buttons.forEach(function (b) {
         const isMatch = b.getAttribute('data-filter') === filter;
         b.classList.toggle('bg-raspberry-600', isMatch);
+        b.classList.toggle('hover:bg-raspberry-700', isMatch);
         b.classList.toggle('text-white', isMatch);
         b.classList.toggle('bg-white', !isMatch);
         b.classList.toggle('dark:bg-choco-800', !isMatch);
         b.classList.toggle('text-choco-700', !isMatch);
         b.classList.toggle('dark:text-cream-200', !isMatch);
+        // The inactive-state hover classes below (hover:bg-raspberry-50 /
+        // dark:hover:bg-choco-700) must be removed entirely on the active
+        // tab, not just out-prioritized — a `:hover` pseudo-class selector
+        // has higher CSS specificity than a plain utility class, so if left
+        // in place it repaints the active tab back to the lighter inactive
+        // color on hover (desktop) or on tap (mobile/tablet, where touch
+        // browsers apply :hover after tap and it sticks), making the
+        // active tab look unselected.
+        b.classList.toggle('hover:bg-raspberry-50', !isMatch);
+        b.classList.toggle('dark:hover:bg-choco-700', !isMatch);
         b.setAttribute('aria-pressed', isMatch ? 'true' : 'false');
       });
       items.forEach(function (item) {

@@ -284,3 +284,59 @@ img.img-fallback-active{
 
 /* ---------- Utility: no horizontal overflow guard ---------- */
 html, body{ max-width: 100%; overflow-x: hidden; }
+
+/* ---------- GLightbox close/nav button override ----------
+   The library's stock "clean" skin gives .gclose a translucent black
+   background (as low as 32% opacity, further cut to ~70% opacity by its own
+   desktop media query) — over pale cake/frosting photos it nearly
+   disappears. Force a solid, high-contrast, touch-sized (44px) button that
+   stays fully visible and tappable on every breakpoint. This file loads
+   after glightbox.min.css, so these win on source order for tied
+   specificity; opacity/background are pinned with !important only where the
+   library's own media query would otherwise re-introduce transparency. */
+.glightbox-clean .gclose,
+.glightbox-clean .gnext,
+.glightbox-clean .gprev{
+  background-color: rgba(31, 21, 14, 0.85) !important; /* choco-900 */
+  opacity: 1 !important;
+  z-index: 99999;
+  box-shadow: 0 2px 10px rgba(0,0,0,.3);
+  transition: background-color .2s ease, transform .2s ease;
+}
+.glightbox-clean .gclose:hover,
+.glightbox-clean .gclose:focus-visible,
+.glightbox-clean .gnext:hover,
+.glightbox-clean .gnext:focus-visible,
+.glightbox-clean .gprev:hover,
+.glightbox-clean .gprev:focus-visible{
+  background-color: rgba(180, 18, 63, 0.95) !important; /* raspberry-600 */
+}
+.glightbox-clean .gclose:focus-visible,
+.glightbox-clean .gnext:focus-visible,
+.glightbox-clean .gprev:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+.glightbox-clean .gclose{
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+}
+.glightbox-clean .gclose svg{
+  width: 20px;
+  height: 20px;
+}
+.glightbox-clean .gnext,
+.glightbox-clean .gprev{
+  width: 44px;
+  height: 50px;
+  border-radius: 10px;
+}
+@media (min-width: 992px){
+  .glightbox-clean .gclose{
+    right: 20px;
+    top: 16px;
+  }
+}
