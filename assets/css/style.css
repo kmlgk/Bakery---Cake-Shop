@@ -72,6 +72,11 @@ select:focus-visible{
   position: relative;
 }
 
+/* Scallop color presets for section-to-section dividers (light/dark aware,
+   since dark mode here is a `.dark` class toggle, not a media query) */
+.scallop-cream{ --scallop-color: #FBF3E6; }
+.dark .scallop-cream{ --scallop-color: #150F09; }
+
 /* Event category cards (Menu page "Cakes for Every Celebration") */
 .event-card{
   transition: transform .35s ease, box-shadow .35s ease;

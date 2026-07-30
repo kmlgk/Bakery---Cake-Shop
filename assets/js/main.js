@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', function () {
     new window.Swiper('.testimonial-swiper', {
       loop: true,
       autoplay: { delay: 5500, disableOnInteraction: false },
-      spaceBetween: 24,
+      spaceBetween: 20,
       slidesPerView: 1,
       breakpoints: {
         768: { slidesPerView: 2 },
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', function () {
     new window.Swiper('.bestseller-swiper', {
       loop: true,
       autoplay: { delay: 4500, disableOnInteraction: false },
-      spaceBetween: 24,
+      spaceBetween: 20,
       slidesPerView: 1.15,
       breakpoints: {
         640: { slidesPerView: 2.1 },
@@ -591,6 +591,544 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
     });
+  });
+
+  /* ---------------------------------------------------------------------
+     19. RATINGS RENDER — data-rating (Desserts page product cards)
+     Static/decorative 1-5 star display rendered from a fixed numeric
+     attribute (never randomized — the same product must show the same
+     rating on its grid card and inside its own Quick View popup, and on
+     every reload). Renders solid, half, and outline stars from a single
+     float value.
+  --------------------------------------------------------------------- */
+  document.querySelectorAll('[data-rating]').forEach(function (el) {
+    const value = parseFloat(el.getAttribute('data-rating')) || 0;
+    const filled = Math.floor(value);
+    const half = value - filled >= 0.5 ? 1 : 0;
+    const empty = 5 - filled - half;
+    let icons = '';
+    for (let i = 0; i < filled; i++) icons += '<i class="fa-solid fa-star text-caramel-500 text-[11px]" aria-hidden="true"></i>';
+    if (half) icons += '<i class="fa-regular fa-star-half-stroke text-caramel-500 text-[11px]" aria-hidden="true"></i>';
+    for (let i = 0; i < empty; i++) icons += '<i class="fa-regular fa-star text-caramel-500/50 text-[11px]" aria-hidden="true"></i>';
+    icons += '<span class="text-[11px] text-choco-500 dark:text-cream-300 ms-1">' + value.toFixed(1) + '</span>';
+    el.innerHTML = icons;
+  });
+
+  /* ---------------------------------------------------------------------
+     20. QUICK VIEW MODAL — data-quickview-trigger / #quick-view-modal
+     One shared modal populated from whichever card's data-qv-* attributes
+     were clicked, rather than one modal per product. Mirrors the mobile
+     drawer's body-scroll-lock / backdrop-click / Escape idiom.
+  --------------------------------------------------------------------- */
+  (function () {
+    const modal = document.getElementById('quick-view-modal');
+    if (!modal) return;
+    const panel = modal.querySelector('[role="dialog"]');
+
+    function open(trigger) {
+      const d = trigger.dataset;
+      modal.querySelector('[data-qv-img]').src = d.qvImg || '';
+      modal.querySelector('[data-qv-img]').alt = d.qvName ? ('Photo of ' + d.qvName) : '';
+      modal.querySelector('[data-qv-category]').textContent = d.qvCategory || '';
+      modal.querySelector('[data-qv-name]').textContent = d.qvName || '';
+      modal.querySelector('[data-qv-desc]').textContent = d.qvDesc || '';
+      modal.querySelector('[data-qv-price]').textContent = d.qvPrice || '';
+      modal.querySelector('[data-qv-order-link]').href = d.qvOrderHref || 'order.html';
+      const ratingEl = modal.querySelector('[data-qv-rating]');
+      if (ratingEl && d.qvRating) {
+        ratingEl.setAttribute('data-rating', d.qvRating);
+        const value = parseFloat(d.qvRating) || 0;
+        const filled = Math.floor(value);
+        const half = value - filled >= 0.5 ? 1 : 0;
+        const empty = 5 - filled - half;
+        let icons = '';
+        for (let i = 0; i < filled; i++) icons += '<i class="fa-solid fa-star text-caramel-500 text-xs" aria-hidden="true"></i>';
+        if (half) icons += '<i class="fa-regular fa-star-half-stroke text-caramel-500 text-xs" aria-hidden="true"></i>';
+        for (let i = 0; i < empty; i++) icons += '<i class="fa-regular fa-star text-caramel-500/50 text-xs" aria-hidden="true"></i>';
+        icons += '<span class="text-xs text-choco-500 dark:text-cream-300 ms-1">' + value.toFixed(1) + '</span>';
+        ratingEl.innerHTML = icons;
+      }
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-quickview-trigger]').forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        open(trigger);
+      });
+    });
+    modal.querySelectorAll('[data-quickview-close]').forEach(function (btn) {
+      btn.addEventListener('click', close);
+    });
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) close();
+    });
+  })();
+
+  /* ---------------------------------------------------------------------
+     21. WISHLIST — data-wishlist-toggle (localStorage, no login)
+     Scoped to whichever page uses it (currently Desserts only) rather
+     than the shared header, to keep the feature's blast radius to the
+     one page it's meaningful on.
+  --------------------------------------------------------------------- */
+  (function () {
+    const toggles = document.querySelectorAll('[data-wishlist-toggle]');
+    if (!toggles.length) return;
+    const STORAGE_KEY = 'bb-wishlist';
+
+    function getSaved() {
+      try { return JSON.parse(window.localStorage.getItem(STORAGE_KEY) || '[]'); }
+      catch (e) { return []; }
+    }
+    function setSaved(list) {
+      try { window.localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); } catch (e) {}
+    }
+
+    function paint(btn, active) {
+      const icon = btn.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-solid', active);
+        icon.classList.toggle('fa-regular', !active);
+      }
+      btn.classList.toggle('text-raspberry-600', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    }
+
+    const saved = getSaved();
+    toggles.forEach(function (btn) {
+      paint(btn, saved.indexOf(btn.getAttribute('data-wishlist-id')) !== -1);
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = btn.getAttribute('data-wishlist-id');
+        const list = getSaved();
+        const idx = list.indexOf(id);
+        if (idx === -1) list.push(id); else list.splice(idx, 1);
+        setSaved(list);
+        paint(btn, idx === -1);
+      });
+    });
+  })();
+
+  /* ---------------------------------------------------------------------
+     22. COUNTDOWN TIMERS — data-countdown (Offers page)
+     Targets are computed fresh at page-load from a *rule*, never a fixed
+     stored date, so a timer can never sit frozen at 00:00:00 or show a
+     negative number after it lapses — when a target is reached, the same
+     rule is re-applied (roll to end of tomorrow / next Sunday / now+N
+     days again), making each timer self-perpetuating with no maintenance.
+       data-countdown-mode="eod"   -> end of today, 23:59:59
+       data-countdown-mode="eow"   -> upcoming Sunday, 23:59:59
+       data-countdown-days="N"     -> N days from the moment the page loaded
+  --------------------------------------------------------------------- */
+  document.querySelectorAll('[data-countdown]').forEach(function (el) {
+    const mode = el.getAttribute('data-countdown-mode');
+    const days = parseInt(el.getAttribute('data-countdown-days'), 10);
+    const dayEl = el.querySelector('[data-countdown-days]');
+    const hourEl = el.querySelector('[data-countdown-hours]');
+    const minEl = el.querySelector('[data-countdown-minutes]');
+    const secEl = el.querySelector('[data-countdown-seconds]');
+    if (!dayEl || !hourEl || !minEl || !secEl) return;
+
+    function computeTarget() {
+      const now = new Date();
+      if (mode === 'eod') {
+        const t = new Date(now);
+        t.setHours(23, 59, 59, 999);
+        return t;
+      }
+      if (mode === 'eow') {
+        const t = new Date(now);
+        const untilSunday = (7 - t.getDay()) % 7;
+        t.setDate(t.getDate() + untilSunday);
+        t.setHours(23, 59, 59, 999);
+        return t;
+      }
+      const t = new Date(now);
+      t.setDate(t.getDate() + (days || 3));
+      return t;
+    }
+
+    let target = computeTarget();
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function tick() {
+      let diff = target.getTime() - Date.now();
+      if (diff <= 0) {
+        target = computeTarget();
+        diff = target.getTime() - Date.now();
+      }
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      dayEl.textContent = pad(d);
+      hourEl.textContent = pad(h);
+      minEl.textContent = pad(m);
+      secEl.textContent = pad(s);
+    }
+
+    tick();
+    setInterval(tick, 1000);
+  });
+
+  /* ---------------------------------------------------------------------
+     23. MENU SEARCH + SORT + PAGINATION — data-menu-paginate (Menu page)
+     Layered on top of the existing category filter tabs (section 9)
+     rather than replacing them: this section re-derives the active
+     category itself from the filter button's aria-pressed state (instead
+     of trusting section 9's .hidden class), so there's no ordering
+     dependency between the two — this section is simply the last, most
+     complete word on which cards end up visible. Search and sort narrow
+     and reorder the active category's matches; pagination then slices
+     that result into a page. Changing category, search, or sort always
+     resets to page 1 — only Prev/Next/page-number/Load More clicks move
+     within the current result set, so the active tab is never lost by
+     paginating. Desktop/tablet get numbered pagination (jumps to exactly
+     one page); mobile gets "Load More" (cumulative reveal) — both drive
+     the same underlying render(), just with a `cumulative` flag flipped
+     depending on which control was used.
+  --------------------------------------------------------------------- */
+  document.querySelectorAll('[data-menu-paginate]').forEach(function (grid) {
+    const filterGroup = document.querySelector('[data-filter-group="#' + grid.id + '"]');
+    const pageSize = parseInt(grid.getAttribute('data-page-size'), 10) || 12;
+    const items = Array.prototype.slice.call(grid.querySelectorAll('[data-filter-item]'));
+    const searchInput = document.querySelector('[data-menu-search]');
+    const sortSelect = document.querySelector('[data-menu-sort]');
+    const countEl = document.querySelector('[data-menu-results-count]');
+    const paginationNav = document.querySelector('[data-menu-pagination]');
+    const pageNumbersEl = paginationNav ? paginationNav.querySelector('[data-page-numbers]') : null;
+    const prevBtn = paginationNav ? paginationNav.querySelector('[data-page-prev]') : null;
+    const nextBtn = paginationNav ? paginationNav.querySelector('[data-page-next]') : null;
+    const loadMoreBtn = document.querySelector('[data-load-more]');
+
+    let currentPage = 1;
+    let cumulative = false;
+
+    function activeCategory() {
+      if (!filterGroup) return 'all';
+      const active = filterGroup.querySelector('[data-filter][aria-pressed="true"]');
+      return active ? active.getAttribute('data-filter') : 'all';
+    }
+
+    function cardText(item) {
+      const name = item.querySelector('h3');
+      const desc = item.querySelector('p');
+      return ((name ? name.textContent : '') + ' ' + (desc ? desc.textContent : '')).toLowerCase();
+    }
+
+    function cardPrice(item) {
+      const priceEl = item.querySelector('span.font-display.font-semibold');
+      if (!priceEl) return 0;
+      const match = priceEl.textContent.match(/[\d.]+/);
+      return match ? parseFloat(match[0]) : 0;
+    }
+
+    function render() {
+      const cat = activeCategory();
+      const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      const sort = sortSelect ? sortSelect.value : 'popular';
+
+      let matches = items.filter(function (item) {
+        const cats = (item.getAttribute('data-categories') || '').split(',');
+        const matchesCat = cat === 'all' || cats.indexOf(cat) !== -1;
+        const matchesSearch = !query || cardText(item).indexOf(query) !== -1;
+        return matchesCat && matchesSearch;
+      });
+
+      if (sort === 'price-asc') {
+        matches = matches.slice().sort(function (a, b) { return cardPrice(a) - cardPrice(b); });
+      } else if (sort === 'price-desc') {
+        matches = matches.slice().sort(function (a, b) { return cardPrice(b) - cardPrice(a); });
+      } else if (sort === 'newest') {
+        matches = matches.slice().sort(function (a, b) {
+          return (b.getAttribute('data-added') ? 1 : 0) - (a.getAttribute('data-added') ? 1 : 0);
+        });
+      }
+      // 'popular' keeps original DOM order as-is
+
+      const total = matches.length;
+      const totalPages = Math.max(Math.ceil(total / pageSize), 1);
+      currentPage = Math.min(Math.max(currentPage, 1), totalPages);
+
+      const windowStart = cumulative ? 0 : (currentPage - 1) * pageSize;
+      const windowEnd = currentPage * pageSize;
+      const visible = matches.slice(windowStart, windowEnd);
+      const visibleSet = new Set(visible);
+
+      // Sorting only reorders the `matches` array — toggling .hidden alone
+      // never moves anything on screen, since the cards' actual DOM/grid
+      // order is untouched. Apply that order visually via CSS `order`
+      // (grid honors it like flexbox) rather than physically re-appending
+      // nodes, so sort works without disturbing anything else.
+      matches.forEach(function (item, idx) { item.style.order = String(idx); });
+
+      items.forEach(function (item) {
+        const show = visibleSet.has(item);
+        item.classList.toggle('hidden', !show);
+        if (show) {
+          item.classList.remove('filter-fade-in');
+          void item.offsetWidth;
+          item.classList.add('filter-fade-in');
+        }
+      });
+
+      if (countEl) {
+        if (total === 0) {
+          countEl.textContent = 'No cakes match your search — try a different term or category.';
+        } else {
+          const shownEnd = Math.min(windowEnd, total);
+          countEl.textContent = 'Showing ' + (windowStart + 1) + '–' + shownEnd + ' of ' + total + ' cakes';
+        }
+      }
+
+      if (pageNumbersEl) {
+        pageNumbersEl.innerHTML = '';
+        for (let p = 1; p <= totalPages; p++) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = String(p);
+          btn.setAttribute('aria-label', 'Page ' + p);
+          const isActive = p === currentPage && !cumulative;
+          if (isActive) btn.setAttribute('aria-current', 'page');
+          btn.className = 'w-10 h-10 rounded-full text-sm font-semibold transition ' + (isActive
+            ? 'bg-raspberry-600 text-white'
+            : 'border border-choco-200 dark:border-choco-600 text-choco-600 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700');
+          btn.addEventListener('click', function () {
+            currentPage = p;
+            cumulative = false;
+            render();
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+          pageNumbersEl.appendChild(btn);
+        }
+      }
+
+      if (prevBtn) prevBtn.disabled = currentPage <= 1 || cumulative;
+      if (nextBtn) nextBtn.disabled = currentPage >= totalPages || cumulative;
+
+      if (loadMoreBtn) {
+        const noMore = cumulative ? windowEnd >= total : currentPage >= totalPages;
+        loadMoreBtn.parentElement.classList.toggle('hidden', noMore);
+      }
+
+      if (window.AOS) window.AOS.refresh();
+    }
+
+    function resetToFirstPage() {
+      currentPage = 1;
+      cumulative = false;
+      render();
+    }
+
+    let searchTimer;
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(resetToFirstPage, 200);
+      });
+    }
+    if (sortSelect) sortSelect.addEventListener('change', resetToFirstPage);
+
+    if (filterGroup) {
+      filterGroup.querySelectorAll('[data-filter]').forEach(function (btn) {
+        btn.addEventListener('click', resetToFirstPage);
+      });
+    }
+    window.addEventListener('hashchange', resetToFirstPage);
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        if (currentPage > 1) {
+          currentPage--;
+          cumulative = false;
+          render();
+          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        currentPage++;
+        cumulative = false;
+        render();
+        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function () {
+        currentPage++;
+        cumulative = true;
+        render();
+      });
+    }
+
+    render();
+  });
+
+  /* ---------------------------------------------------------------------
+     24. GALLERY PAGINATION — data-gallery-paginate (Gallery page)
+     Same category-preserving pagination model as section 23, but with one
+     difference: "3 rows per page" isn't a fixed item count, since the
+     grid's own column count changes per breakpoint (2/3/4 cols). Item
+     count per page is therefore recomputed as rows × current columns,
+     re-derived from actual viewport width against the exact same
+     `md`/`lg` breakpoints the grid's own Tailwind classes use, so the
+     math always matches what's really rendered. Recalculates on resize
+     (debounced) in case a column count crosses a breakpoint.
+  --------------------------------------------------------------------- */
+  document.querySelectorAll('[data-gallery-paginate]').forEach(function (grid) {
+    const filterGroup = document.querySelector('[data-filter-group="#' + grid.id + '"]');
+    const rowsPerPage = parseInt(grid.getAttribute('data-rows-per-page'), 10) || 3;
+    const colsMobile = parseInt(grid.getAttribute('data-cols-mobile'), 10) || 2;
+    const colsTablet = parseInt(grid.getAttribute('data-cols-tablet'), 10) || 3;
+    const colsDesktop = parseInt(grid.getAttribute('data-cols-desktop'), 10) || 4;
+    const items = Array.prototype.slice.call(grid.querySelectorAll('[data-filter-item]'));
+    const countEl = document.querySelector('[data-gallery-results-count]');
+    const paginationNav = document.querySelector('[data-gallery-pagination]');
+    const pageNumbersEl = paginationNav ? paginationNav.querySelector('[data-page-numbers]') : null;
+    const prevBtn = paginationNav ? paginationNav.querySelector('[data-page-prev]') : null;
+    const nextBtn = paginationNav ? paginationNav.querySelector('[data-page-next]') : null;
+    const loadMoreBtn = document.querySelector('[data-gallery-load-more]');
+
+    let currentPage = 1;
+    let cumulative = false;
+
+    function currentCols() {
+      if (window.matchMedia('(min-width: 1024px)').matches) return colsDesktop;
+      if (window.matchMedia('(min-width: 768px)').matches) return colsTablet;
+      return colsMobile;
+    }
+
+    function activeCategory() {
+      if (!filterGroup) return 'all';
+      const active = filterGroup.querySelector('[data-filter][aria-pressed="true"]');
+      return active ? active.getAttribute('data-filter') : 'all';
+    }
+
+    function render() {
+      const cat = activeCategory();
+      const pageSize = rowsPerPage * currentCols();
+
+      const matches = items.filter(function (item) {
+        const cats = (item.getAttribute('data-categories') || '').split(',');
+        return cat === 'all' || cats.indexOf(cat) !== -1;
+      });
+
+      const total = matches.length;
+      const totalPages = Math.max(Math.ceil(total / pageSize), 1);
+      currentPage = Math.min(Math.max(currentPage, 1), totalPages);
+
+      const windowStart = cumulative ? 0 : (currentPage - 1) * pageSize;
+      const windowEnd = currentPage * pageSize;
+      const visibleSet = new Set(matches.slice(windowStart, windowEnd));
+
+      items.forEach(function (item) {
+        const show = visibleSet.has(item);
+        item.classList.toggle('hidden', !show);
+        if (show) {
+          item.classList.remove('filter-fade-in');
+          void item.offsetWidth;
+          item.classList.add('filter-fade-in');
+        }
+      });
+
+      if (countEl) {
+        if (total === 0) {
+          countEl.textContent = 'No photos in this category yet.';
+        } else {
+          const shownEnd = Math.min(windowEnd, total);
+          countEl.textContent = 'Showing ' + (windowStart + 1) + '–' + shownEnd + ' of ' + total + ' photos';
+        }
+      }
+
+      if (pageNumbersEl) {
+        pageNumbersEl.innerHTML = '';
+        for (let p = 1; p <= totalPages; p++) {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.textContent = String(p);
+          btn.setAttribute('aria-label', 'Page ' + p);
+          const isActive = p === currentPage && !cumulative;
+          if (isActive) btn.setAttribute('aria-current', 'page');
+          btn.className = 'w-10 h-10 rounded-full text-sm font-semibold transition ' + (isActive
+            ? 'bg-raspberry-600 text-white'
+            : 'border border-choco-200 dark:border-choco-600 text-choco-600 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700');
+          btn.addEventListener('click', function () {
+            currentPage = p;
+            cumulative = false;
+            render();
+            grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+          pageNumbersEl.appendChild(btn);
+        }
+      }
+
+      if (prevBtn) prevBtn.disabled = currentPage <= 1 || cumulative;
+      if (nextBtn) nextBtn.disabled = currentPage >= totalPages || cumulative;
+      if (loadMoreBtn) {
+        const noMore = cumulative ? windowEnd >= total : currentPage >= totalPages;
+        loadMoreBtn.parentElement.classList.toggle('hidden', noMore);
+      }
+
+      if (window.AOS) window.AOS.refresh();
+    }
+
+    function resetToFirstPage() {
+      currentPage = 1;
+      cumulative = false;
+      render();
+    }
+
+    if (filterGroup) {
+      filterGroup.querySelectorAll('[data-filter]').forEach(function (btn) {
+        btn.addEventListener('click', resetToFirstPage);
+      });
+    }
+    window.addEventListener('hashchange', resetToFirstPage);
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () { cumulative = false; currentPage = 1; render(); }, 200);
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function () {
+        if (currentPage > 1) {
+          currentPage--;
+          cumulative = false;
+          render();
+          grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function () {
+        currentPage++;
+        cumulative = false;
+        render();
+        grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+    if (loadMoreBtn) {
+      loadMoreBtn.addEventListener('click', function () {
+        currentPage++;
+        cumulative = true;
+        render();
+      });
+    }
+
+    render();
   });
 
 });

@@ -52,7 +52,7 @@
         <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom & Batter Cake Studio logo" class="h-16 lg:h-20 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300">
       </a>
 
-      <nav class="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-6 px-4" aria-label="Primary">
+      <nav class="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-5 px-4" aria-label="Primary">
         <div class="relative" data-dropdown>
           <button type="button" data-dropdown-trigger aria-haspopup="true" aria-expanded="false" class="inline-flex items-center gap-1.5 font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
             Home <i data-dropdown-caret class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
@@ -64,23 +64,26 @@
         </div>
         <a href="about.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">About</a>
         <a href="menu.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Menu</a>
+        <a href="desserts.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Desserts</a>
+        <a href="special-occasions.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Occasions</a>
+        <a href="offers.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Offers</a>
         <a href="gallery.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Gallery</a>
         <a href="faq.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">FAQ</a>
         <a href="contact.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Contact</a>
       </nav>
 
       <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
-        <button data-theme-toggle type="button" aria-label="Toggle dark mode" class="w-10 h-10 grid place-items-center rounded-full bg-white/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition shrink-0">
+        <button data-theme-toggle type="button" aria-label="Toggle dark mode" class="w-10 h-10 grid place-items-center rounded-full bg-white/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:bg-cream-200 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition shrink-0">
           <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
         </button>
-        <button data-dir-toggle type="button" aria-label="Toggle text direction" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-white/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition text-xs font-semibold shrink-0">
+        <button data-dir-toggle type="button" aria-label="Toggle text direction" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-white/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:bg-cream-200 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition text-xs font-semibold shrink-0">
           <span data-dir-label>RTL</span>
         </button>
         <a href="order.html" class="btn-header-cta hidden xl:inline-flex items-center gap-2 text-white text-sm font-bold px-6 py-3 rounded-full whitespace-nowrap shrink-0">
           <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Order Now
           <i class="fa-solid fa-arrow-right cta-arrow rtl:rotate-180" aria-hidden="true"></i>
         </a>
-        <button id="drawer-open" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu" class="xl:hidden w-10 h-10 grid place-items-center rounded-full bg-white/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 shrink-0">
+        <button id="drawer-open" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu" class="xl:hidden w-10 h-10 grid place-items-center rounded-full bg-white/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:bg-cream-200 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition shrink-0">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
       </div>
@@ -93,25 +96,28 @@
 <aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-[86%] max-w-sm bg-cream-50 dark:bg-choco-900 z-[70] shadow-2xl p-6 flex flex-col" aria-label="Mobile navigation">
   <div class="flex items-center justify-between mb-8">
     <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom &amp; Batter Cake Studio logo" class="h-14 w-auto object-contain drop-shadow-sm">
-    <button id="drawer-close" type="button" aria-label="Close menu" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200 dark:bg-choco-800 text-choco-700 dark:text-cream-100">
+    <button id="drawer-close" type="button" aria-label="Close menu" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200 dark:bg-choco-800 text-choco-700 dark:text-cream-100 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
       <i class="fa-solid fa-xmark" aria-hidden="true"></i>
     </button>
   </div>
   <nav class="flex flex-col gap-1 text-lg" aria-label="Mobile primary">
-    <a href="index.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 1</a>
-    <a href="home-1.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 2</a>
-    <a href="about.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">About</a>
-    <a href="menu.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Menu</a>
-    <a href="gallery.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Gallery</a>
-    <a href="order.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Custom Order</a>
-    <a href="faq.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">FAQ</a>
-    <a href="contact.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Contact</a>
+    <a href="index.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 1</a>
+    <a href="home-1.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 2</a>
+    <a href="about.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">About</a>
+    <a href="menu.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Menu</a>
+    <a href="desserts.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Desserts</a>
+    <a href="special-occasions.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Special Occasions</a>
+    <a href="offers.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Offers</a>
+    <a href="gallery.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Gallery</a>
+    <a href="order.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Custom Order</a>
+    <a href="faq.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">FAQ</a>
+    <a href="contact.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Contact</a>
   </nav>
   <div class="mt-6 flex items-center gap-3">
-    <button data-theme-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+    <button data-theme-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
       <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span> Theme
     </button>
-    <button data-dir-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+    <button data-dir-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
       <i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> <span data-dir-label>RTL</span>
     </button>
   </div>
@@ -132,17 +138,17 @@
   <div class="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-caramel-400/30 blur-3xl blob-b" aria-hidden="true"></div>
 
   <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-24 w-full">
-    <div class="max-w-2xl">
+    <div class="max-w-2xl mx-auto text-center">
       <span data-aos="fade-up" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur text-caramel-200 text-sm font-medium px-4 py-1.5 rounded-full border border-white/20">
         <i class="fa-solid fa-sparkles" aria-hidden="true"></i> Baked fresh daily in Riverdale since 2011
       </span>
       <h1 data-aos="fade-up" data-aos-delay="100" class="font-display text-4xl sm:text-5xl lg:text-6xl font-semibold text-white mt-6 leading-[1.1]">
         Handcrafted Cakes for<br> Life's <span class="font-script text-caramel-300 text-5xl sm:text-6xl lg:text-7xl">Sweetest</span> Moments
       </h1>
-      <p data-aos="fade-up" data-aos-delay="200" class="text-cream-200/90 text-lg mt-6 max-w-xl">
+      <p data-aos="fade-up" data-aos-delay="200" class="text-cream-200/90 text-lg mt-6 max-w-xl mx-auto">
         From first birthdays to wedding tiers, every Bloom &amp; Batter cake is designed around your story, baked with real butter, and finished by hand — no fondant shortcuts, ever.
       </p>
-      <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap gap-4 mt-8">
+      <div data-aos="fade-up" data-aos-delay="300" class="flex flex-wrap justify-center gap-4 mt-8">
         <a href="order.html" class="btn-primary inline-flex items-center gap-2 text-white font-semibold px-7 py-3.5 rounded-full">
           <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Request a Custom Cake
         </a>
@@ -190,29 +196,29 @@
       <p class="text-choco-500 dark:text-cream-300 mt-4">No mixes, no shortcuts — just real ingredients, careful hands, and a design process built around what you're celebrating.</p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
-      <div data-aos="fade-up" data-aos-delay="0" class="bg-white dark:bg-choco-800 rounded-2xl p-7 shadow-sm hover:shadow-soft transition h-full flex flex-col">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-14">
+      <div data-aos="fade-up" data-aos-delay="0" class="bg-white dark:bg-choco-800 rounded-2xl p-6 shadow-sm hover:shadow-soft transition h-full flex flex-col">
         <div class="w-14 h-14 rounded-2xl bg-raspberry-100 dark:bg-raspberry-900/40 text-raspberry-600 dark:text-caramel-300 grid place-items-center text-xl mb-5">
           <i class="fa-solid fa-wheat-awn" aria-hidden="true"></i>
         </div>
         <h3 class="font-display text-lg font-semibold">Fresh, Real Ingredients</h3>
         <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">European butter, farm eggs, and Belgian chocolate sourced weekly — nothing frozen, nothing pre-mixed.</p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-choco-800 rounded-2xl p-7 shadow-sm hover:shadow-soft transition h-full flex flex-col">
+      <div data-aos="fade-up" data-aos-delay="100" class="bg-white dark:bg-choco-800 rounded-2xl p-6 shadow-sm hover:shadow-soft transition h-full flex flex-col">
         <div class="w-14 h-14 rounded-2xl bg-caramel-100 dark:bg-caramel-900/40 text-caramel-600 dark:text-caramel-300 grid place-items-center text-xl mb-5">
           <i class="fa-solid fa-palette" aria-hidden="true"></i>
         </div>
         <h3 class="font-display text-lg font-semibold">Fully Custom Designs</h3>
         <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Send a theme, a photo, or a color palette — our decorators sketch a one-of-a-kind concept before baking begins.</p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="200" class="bg-white dark:bg-choco-800 rounded-2xl p-7 shadow-sm hover:shadow-soft transition h-full flex flex-col">
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-white dark:bg-choco-800 rounded-2xl p-6 shadow-sm hover:shadow-soft transition h-full flex flex-col">
         <div class="w-14 h-14 rounded-2xl bg-raspberry-100 dark:bg-raspberry-900/40 text-raspberry-600 dark:text-caramel-300 grid place-items-center text-xl mb-5">
           <i class="fa-solid fa-truck-fast" aria-hidden="true"></i>
         </div>
         <h3 class="font-display text-lg font-semibold">On-Time Pickup & Delivery</h3>
         <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Choose your pickup date at checkout — we hold every slot and confirm 48 hours ahead so nothing is left to chance.</p>
       </div>
-      <div data-aos="fade-up" data-aos-delay="300" class="bg-white dark:bg-choco-800 rounded-2xl p-7 shadow-sm hover:shadow-soft transition h-full flex flex-col">
+      <div data-aos="fade-up" data-aos-delay="300" class="bg-white dark:bg-choco-800 rounded-2xl p-6 shadow-sm hover:shadow-soft transition h-full flex flex-col">
         <div class="w-14 h-14 rounded-2xl bg-caramel-100 dark:bg-caramel-900/40 text-caramel-600 dark:text-caramel-300 grid place-items-center text-xl mb-5">
           <i class="fa-solid fa-leaf" aria-hidden="true"></i>
         </div>
@@ -224,7 +230,8 @@
 </section>
 
 <!-- ===================== OCCASIONS ===================== -->
-<section class="py-24 lg:py-28 bg-cream-200/60 dark:bg-choco-950/40">
+<section class="relative py-24 lg:py-28 bg-cream-200/60 dark:bg-choco-800/40">
+  <div class="scallop-top scallop-cream absolute top-0 inset-x-0" aria-hidden="true"></div>
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="flex flex-wrap items-end justify-between gap-6" data-aos="fade-up">
       <div>
@@ -236,7 +243,7 @@
       </a>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7 mt-12">
+    <div class="grid md:grid-cols-3 gap-5 mt-12">
       <a href="menu.html#birthday" class="occasion-card group relative rounded-3xl overflow-hidden h-80 block" data-aos="zoom-in">
         <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?w=800&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Colorful birthday cake with lit candles" class="w-full h-full object-cover">
         <div class="occasion-overlay absolute inset-0 bg-gradient-to-t from-choco-900/85 via-choco-900/10 to-transparent"></div>
@@ -296,8 +303,17 @@
           <h3 class="font-display text-xl text-white font-semibold">Seasonal Specials</h3>
         </div>
       </a>
+      <a href="order.html" class="occasion-card group relative rounded-3xl overflow-hidden h-64 block" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1554922735-c09cab077e35?w=800&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Cake hand-painted with a pastel watercolor buttercream design" class="w-full h-full object-cover">
+        <div class="occasion-overlay absolute inset-0 bg-gradient-to-t from-choco-900/85 via-choco-900/10 to-transparent"></div>
+        <div class="absolute bottom-0 p-6">
+          <span class="text-caramel-300 text-sm font-medium">Don't see your celebration?</span>
+          <h3 class="font-display text-xl text-white font-semibold">Start a Custom Order</h3>
+        </div>
+      </a>
     </div>
   </div>
+  <div class="scallop-bottom scallop-cream absolute bottom-0 inset-x-0" aria-hidden="true"></div>
 </section>
 
 <!-- ===================== TODAY'S MENU HIGHLIGHTS ===================== -->
@@ -309,7 +325,7 @@
       <p class="text-choco-500 dark:text-cream-300 mt-4">A rotating selection of our most-loved slices and jars — available while supplies last, updated every morning.</p>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
       <div class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
         <div class="relative h-56">
           <img src="https://images.unsplash.com/photo-1562585194-aa017445b3ad?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Rich dark chocolate raspberry layer cake slice" class="w-full h-full object-cover">
@@ -351,6 +367,20 @@
           <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Orange-zest almond flour cake with mascarpone glaze.</p>
         </div>
       </div>
+
+      <div class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="300">
+        <div class="relative h-56">
+          <img src="https://images.unsplash.com/photo-1629980173135-9b01683515f5?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Layered chocolate mousse dessert jars with gold lids" class="w-full h-full object-cover">
+          <span class="absolute top-4 left-4 bg-choco-700 text-white text-xs font-semibold px-3 py-1 rounded-full">Jar Dessert</span>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <div class="flex items-start justify-between gap-3">
+            <h3 class="font-display text-xl font-semibold">Chocolate Mousse Jar</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$5.50</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2 flex-1">Layered dark chocolate mousse, cocoa crumble, and salted caramel in a to-go jar.</p>
+        </div>
+      </div>
     </div>
 
     <div class="text-center mt-12" data-aos="fade-up">
@@ -362,31 +392,32 @@
 </section>
 
 <!-- ===================== GALLERY PREVIEW ===================== -->
-<section class="py-24 lg:py-28 bg-cream-200/60 dark:bg-choco-950/40">
+<section class="relative py-24 lg:py-28 bg-cream-200/60 dark:bg-choco-800/40">
+  <div class="scallop-top scallop-cream absolute top-0 inset-x-0" aria-hidden="true"></div>
   <div class="max-w-7xl mx-auto px-5 lg:px-8">
     <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
       <span class="font-script text-2xl text-caramel-600 dark:text-caramel-300">Recently delivered</span>
       <h2 class="font-display text-3xl lg:text-4xl font-semibold mt-2">From Our Gallery</h2>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 auto-rows-[140px] md:auto-rows-[160px]">
-      <a href="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox row-span-2 rounded-2xl overflow-hidden block" data-gallery="home-preview">
-        <img src="https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Rich chocolate drip cake delivered for a birthday" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-12 auto-rows-[140px] md:auto-rows-[160px]">
+      <a href="https://images.unsplash.com/photo-1551879403-6adb554966fd?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox row-span-2 rounded-2xl overflow-hidden block" data-gallery="home-preview">
+        <img src="https://images.unsplash.com/photo-1551879403-6adb554966fd?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Elegant birthday cake with sugared cranberries and a single candle" class="w-full h-full object-cover hover:scale-105 transition duration-500">
       </a>
-      <a href="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox rounded-2xl overflow-hidden block" data-gallery="home-preview">
-        <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Assorted pastries boxed for a client pickup" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+      <a href="https://images.unsplash.com/photo-1643944471768-2d2eac3afb6d?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox rounded-2xl overflow-hidden block" data-gallery="home-preview">
+        <img src="https://images.unsplash.com/photo-1643944471768-2d2eac3afb6d?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Bakery display case filled with fresh pastries and croissants" class="w-full h-full object-cover hover:scale-105 transition duration-500">
       </a>
-      <a href="https://images.unsplash.com/photo-1512152272829-e3139592d56f?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox rounded-2xl overflow-hidden block" data-gallery="home-preview">
-        <img src="https://images.unsplash.com/photo-1512152272829-e3139592d56f?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Bakery display case with finished cakes" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+      <a href="https://images.unsplash.com/photo-1547398847-19d7560a6257?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox rounded-2xl overflow-hidden block" data-gallery="home-preview">
+        <img src="https://images.unsplash.com/photo-1547398847-19d7560a6257?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Assorted petit fours and mini treats at the display counter" class="w-full h-full object-cover hover:scale-105 transition duration-500">
       </a>
-      <a href="https://images.unsplash.com/photo-1604702433171-33756f3f3825?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox row-span-2 rounded-2xl overflow-hidden block" data-gallery="home-preview">
-        <img src="https://images.unsplash.com/photo-1604702433171-33756f3f3825?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Rustic outdoor wedding cake with fresh florals" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+      <a href="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox row-span-2 rounded-2xl overflow-hidden block" data-gallery="home-preview">
+        <img src="https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Four-tier wedding cake cascading with pink and cream roses" class="w-full h-full object-cover hover:scale-105 transition duration-500">
       </a>
-      <a href="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox rounded-2xl overflow-hidden block" data-gallery="home-preview">
-        <img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Fresh loaves and pastries on bakery shelves" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+      <a href="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox rounded-2xl overflow-hidden block" data-gallery="home-preview">
+        <img src="https://images.unsplash.com/photo-1614707267537-b85aaf00c4b7?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Red velvet cupcake topped with swirled cream cheese frosting" class="w-full h-full object-cover hover:scale-105 transition duration-500">
       </a>
-      <a href="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox rounded-2xl overflow-hidden block" data-gallery="home-preview">
-        <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Our baker piping decorative buttercream detail" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+      <a href="https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?w=1200&q=80&auto=format&fit=crop" data-type="image" class="glightbox rounded-2xl overflow-hidden block" data-gallery="home-preview">
+        <img src="https://images.unsplash.com/photo-1517427294546-5aa121f68e8a?w=600&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Multi-layer chocolate cake slice plated with a fork" class="w-full h-full object-cover hover:scale-105 transition duration-500">
       </a>
     </div>
 
@@ -396,6 +427,7 @@
       </a>
     </div>
   </div>
+  <div class="scallop-bottom scallop-cream absolute bottom-0 inset-x-0" aria-hidden="true"></div>
 </section>
 
 <!-- ===================== TESTIMONIALS ===================== -->
@@ -467,33 +499,63 @@
 </section>
 
 <!-- ===================== PROCESS TIMELINE ===================== -->
-<section class="py-24 lg:py-28 bg-choco-900 text-cream-100">
+<section class="relative py-24 lg:py-28 bg-choco-900 text-cream-100">
+  <div class="scallop-top absolute top-0 inset-x-0" style="--scallop-color:#1F150E;" aria-hidden="true"></div>
   <div class="max-w-6xl mx-auto px-5 lg:px-8">
     <div class="text-center max-w-2xl mx-auto" data-aos="fade-up">
       <span class="font-script text-2xl text-caramel-300">How ordering works</span>
       <h2 class="font-display text-3xl lg:text-4xl font-semibold mt-2 text-white">From Enquiry to Doorstep</h2>
     </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
-      <div class="text-center" data-aos="fade-up" data-aos-delay="0">
-        <div class="w-16 h-16 mx-auto rounded-full bg-raspberry-600 text-white grid place-items-center font-display text-xl font-semibold">1</div>
-        <h3 class="font-display text-lg font-semibold mt-5">Share Your Idea</h3>
-        <p class="text-sm text-cream-300 mt-2">Fill in our custom cake form with occasion, flavor, and your preferred pickup date.</p>
+    <div class="relative max-w-3xl mx-auto mt-16">
+      <div class="hidden lg:block absolute left-1/2 -translate-x-1/2 top-2 bottom-2 border-l-2 border-dashed border-white/20" aria-hidden="true"></div>
+
+      <div class="lg:flex lg:items-center lg:gap-10" data-aos="fade-right">
+        <div class="lg:w-1/2 lg:text-right lg:pr-14 text-center lg:text-right">
+          <h3 class="font-display text-xl font-semibold text-white">Share Your Idea</h3>
+          <p class="text-sm text-cream-300 mt-2">Fill in our custom cake form with occasion, flavor, and your preferred pickup date.</p>
+        </div>
+        <div class="relative shrink-0 w-16 h-16 rounded-full bg-raspberry-600 text-white grid place-items-center mx-auto lg:mx-0 mt-5 lg:mt-0 ring-4 ring-choco-900 z-10">
+          <i class="fa-solid fa-pen-to-square text-xl" aria-hidden="true"></i>
+          <span class="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-white text-raspberry-600 text-xs font-bold grid place-items-center">1</span>
+        </div>
+        <div class="hidden lg:block lg:w-1/2"></div>
       </div>
-      <div class="text-center" data-aos="fade-up" data-aos-delay="100">
-        <div class="w-16 h-16 mx-auto rounded-full bg-raspberry-600 text-white grid place-items-center font-display text-xl font-semibold">2</div>
-        <h3 class="font-display text-lg font-semibold mt-5">We Design & Quote</h3>
-        <p class="text-sm text-cream-300 mt-2">A decorator sketches your concept and sends a fixed quote within 24 hours.</p>
+
+      <div class="lg:flex lg:items-center lg:gap-10 lg:flex-row-reverse mt-10 lg:mt-14" data-aos="fade-left">
+        <div class="lg:w-1/2 lg:pl-14 text-center lg:text-left">
+          <h3 class="font-display text-xl font-semibold text-white">We Design &amp; Quote</h3>
+          <p class="text-sm text-cream-300 mt-2">A decorator sketches your concept and sends a fixed quote within 24 hours.</p>
+        </div>
+        <div class="relative shrink-0 w-16 h-16 rounded-2xl bg-caramel-500 text-white grid place-items-center mx-auto lg:mx-0 mt-5 lg:mt-0 ring-4 ring-choco-900 z-10">
+          <i class="fa-solid fa-pencil text-xl" aria-hidden="true"></i>
+          <span class="absolute -top-1.5 -left-1.5 w-6 h-6 rounded-full bg-white text-caramel-600 text-xs font-bold grid place-items-center">2</span>
+        </div>
+        <div class="hidden lg:block lg:w-1/2"></div>
       </div>
-      <div class="text-center" data-aos="fade-up" data-aos-delay="200">
-        <div class="w-16 h-16 mx-auto rounded-full bg-raspberry-600 text-white grid place-items-center font-display text-xl font-semibold">3</div>
-        <h3 class="font-display text-lg font-semibold mt-5">We Bake by Hand</h3>
-        <p class="text-sm text-cream-300 mt-2">Your cake is baked, filled, and decorated fresh the day before pickup.</p>
+
+      <div class="lg:flex lg:items-center lg:gap-10 mt-10 lg:mt-14" data-aos="fade-right">
+        <div class="lg:w-1/2 lg:text-right text-center lg:text-right lg:pr-14">
+          <h3 class="font-display text-xl font-semibold text-white">We Bake by Hand</h3>
+          <p class="text-sm text-cream-300 mt-2">Your cake is baked, filled, and decorated fresh the day before pickup.</p>
+        </div>
+        <div class="relative shrink-0 w-16 h-16 rounded-full bg-raspberry-600 text-white grid place-items-center mx-auto lg:mx-0 mt-5 lg:mt-0 ring-4 ring-choco-900 z-10">
+          <i class="fa-solid fa-cake-candles text-xl" aria-hidden="true"></i>
+          <span class="absolute -top-1.5 -right-1.5 w-6 h-6 rounded-full bg-white text-raspberry-600 text-xs font-bold grid place-items-center">3</span>
+        </div>
+        <div class="hidden lg:block lg:w-1/2"></div>
       </div>
-      <div class="text-center" data-aos="fade-up" data-aos-delay="300">
-        <div class="w-16 h-16 mx-auto rounded-full bg-raspberry-600 text-white grid place-items-center font-display text-xl font-semibold">4</div>
-        <h3 class="font-display text-lg font-semibold mt-5">Pickup or Delivery</h3>
-        <p class="text-sm text-cream-300 mt-2">Collect in-store or choose local delivery — either way, it arrives picture-perfect.</p>
+
+      <div class="lg:flex lg:items-center lg:gap-10 lg:flex-row-reverse mt-10 lg:mt-14" data-aos="fade-left">
+        <div class="lg:w-1/2 lg:pl-14 text-center lg:text-left">
+          <h3 class="font-display text-xl font-semibold text-white">Pickup or Delivery</h3>
+          <p class="text-sm text-cream-300 mt-2">Collect in-store or choose local delivery — either way, it arrives picture-perfect.</p>
+        </div>
+        <div class="relative shrink-0 w-16 h-16 rounded-2xl bg-caramel-500 text-white grid place-items-center mx-auto lg:mx-0 mt-5 lg:mt-0 ring-4 ring-choco-900 z-10">
+          <i class="fa-solid fa-truck-fast text-xl" aria-hidden="true"></i>
+          <span class="absolute -top-1.5 -left-1.5 w-6 h-6 rounded-full bg-white text-caramel-600 text-xs font-bold grid place-items-center">4</span>
+        </div>
+        <div class="hidden lg:block lg:w-1/2"></div>
       </div>
     </div>
   </div>

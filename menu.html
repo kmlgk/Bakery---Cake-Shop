@@ -45,7 +45,7 @@
         <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom & Batter Cake Studio logo" class="h-16 lg:h-20 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform duration-300">
       </a>
 
-      <nav class="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-6 px-4" aria-label="Primary">
+      <nav class="hidden xl:flex items-center justify-center flex-1 min-w-0 gap-5 px-4" aria-label="Primary">
         <div class="relative" data-dropdown>
           <button type="button" data-dropdown-trigger aria-haspopup="true" aria-expanded="false" class="inline-flex items-center gap-1.5 font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
             Home <i data-dropdown-caret class="fa-solid fa-chevron-down text-[10px] transition-transform" aria-hidden="true"></i>
@@ -57,23 +57,26 @@
         </div>
         <a href="about.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">About</a>
         <a href="menu.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Menu</a>
+        <a href="desserts.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Desserts</a>
+        <a href="special-occasions.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Occasions</a>
+        <a href="offers.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Offers</a>
         <a href="gallery.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Gallery</a>
         <a href="faq.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">FAQ</a>
         <a href="contact.html" data-nav-link class="font-medium text-sm xl:text-base whitespace-nowrap text-choco-700 dark:text-cream-100 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Contact</a>
       </nav>
 
       <div class="flex items-center gap-1.5 lg:gap-2 xl:gap-3 shrink-0">
-        <button data-theme-toggle type="button" aria-label="Toggle dark mode" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition shrink-0">
+        <button data-theme-toggle type="button" aria-label="Toggle dark mode" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition shrink-0">
           <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
         </button>
-        <button data-dir-toggle type="button" aria-label="Toggle text direction" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:text-raspberry-600 transition text-xs font-semibold shrink-0">
+        <button data-dir-toggle type="button" aria-label="Toggle text direction" class="hidden sm:grid w-10 h-10 place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition text-xs font-semibold shrink-0">
           <span data-dir-label>RTL</span>
         </button>
         <a href="order.html" class="btn-header-cta hidden xl:inline-flex items-center gap-2 text-white text-sm font-bold px-6 py-3 rounded-full whitespace-nowrap shrink-0">
           <i class="fa-solid fa-cake-candles" aria-hidden="true"></i> Order Now
           <i class="fa-solid fa-arrow-right cta-arrow rtl:rotate-180" aria-hidden="true"></i>
         </a>
-        <button id="drawer-open" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu" class="xl:hidden w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 shrink-0">
+        <button id="drawer-open" type="button" aria-controls="mobile-drawer" aria-expanded="false" aria-label="Open menu" class="xl:hidden w-10 h-10 grid place-items-center rounded-full bg-cream-200/70 dark:bg-choco-800/70 text-choco-700 dark:text-cream-100 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition shrink-0">
           <i class="fa-solid fa-bars" aria-hidden="true"></i>
         </button>
       </div>
@@ -86,25 +89,28 @@
 <aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-[86%] max-w-sm bg-cream-50 dark:bg-choco-900 z-[70] shadow-2xl p-6 flex flex-col" aria-label="Mobile navigation">
   <div class="flex items-center justify-between mb-8">
     <img src="assets/images/logo.png" data-fallback width="1254" height="1254" alt="Bloom &amp; Batter Cake Studio logo" class="h-14 w-auto object-contain drop-shadow-sm">
-    <button id="drawer-close" type="button" aria-label="Close menu" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200 dark:bg-choco-800 text-choco-700 dark:text-cream-100">
+    <button id="drawer-close" type="button" aria-label="Close menu" class="w-10 h-10 grid place-items-center rounded-full bg-cream-200 dark:bg-choco-800 text-choco-700 dark:text-cream-100 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
       <i class="fa-solid fa-xmark" aria-hidden="true"></i>
     </button>
   </div>
   <nav class="flex flex-col gap-1 text-lg" aria-label="Mobile primary">
-    <a href="index.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 1</a>
-    <a href="home-1.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Home Page 2</a>
-    <a href="about.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">About</a>
-    <a href="menu.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Menu</a>
-    <a href="gallery.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Gallery</a>
-    <a href="order.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Custom Order</a>
-    <a href="faq.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">FAQ</a>
-    <a href="contact.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium">Contact</a>
+    <a href="index.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 1</a>
+    <a href="home-1.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Home Page 2</a>
+    <a href="about.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">About</a>
+    <a href="menu.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Menu</a>
+    <a href="desserts.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Desserts</a>
+    <a href="special-occasions.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Special Occasions</a>
+    <a href="offers.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Offers</a>
+    <a href="gallery.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Gallery</a>
+    <a href="order.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Custom Order</a>
+    <a href="faq.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">FAQ</a>
+    <a href="contact.html" data-nav-link class="py-3 border-b border-choco-100 dark:border-choco-800 text-choco-700 dark:text-cream-100 font-medium hover:text-raspberry-600 dark:hover:text-caramel-400 transition">Contact</a>
   </nav>
   <div class="mt-6 flex items-center gap-3">
-    <button data-theme-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+    <button data-theme-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
       <span data-theme-icon><i class="fa-solid fa-moon" aria-hidden="true"></i></span> Theme
     </button>
-    <button data-dir-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2">
+    <button data-dir-toggle type="button" class="flex-1 py-2.5 rounded-full bg-cream-200 dark:bg-choco-800 text-sm font-semibold flex items-center justify-center gap-2 hover:bg-cream-300 dark:hover:bg-choco-700 hover:text-raspberry-600 dark:hover:text-caramel-400 transition">
       <i class="fa-solid fa-arrow-right-arrow-left" aria-hidden="true"></i> <span data-dir-label>RTL</span>
     </button>
   </div>
@@ -254,9 +260,30 @@
       <button type="button" data-filter="corporate" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Corporate Events</button>
       <button type="button" data-filter="cupcake" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Cupcakes</button>
       <button type="button" data-filter="seasonal" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Seasonal</button>
+      <button type="button" data-filter="graduation" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Graduation</button>
+      <button type="button" data-filter="festivals" aria-pressed="false" class="px-5 py-2.5 rounded-full text-sm font-semibold bg-white dark:bg-choco-800 text-choco-700 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 transition">Festivals</button>
     </div>
 
-    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 justify-between mt-8 max-w-3xl mx-auto">
+      <div class="relative flex-1">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 rtl:left-auto rtl:right-4 top-1/2 -translate-y-1/2 text-choco-400 dark:text-cream-400 text-sm" aria-hidden="true"></i>
+        <label for="menu-search" class="sr-only">Search the menu</label>
+        <input type="search" id="menu-search" data-menu-search placeholder="Search cakes, cupcakes, flavors…" class="w-full pl-10 rtl:pl-4 rtl:pr-10 pr-4 py-2.5 rounded-full border border-choco-200 dark:border-choco-600 bg-white dark:bg-choco-800 text-sm focus:outline-none focus:border-raspberry-500">
+      </div>
+      <div class="flex items-center gap-2 shrink-0">
+        <label for="menu-sort" class="text-sm text-choco-500 dark:text-cream-300 whitespace-nowrap">Sort by</label>
+        <select id="menu-sort" data-menu-sort class="px-4 py-2.5 rounded-full border border-choco-200 dark:border-choco-600 bg-white dark:bg-choco-800 text-sm focus:outline-none focus:border-raspberry-500">
+          <option value="popular">Popular</option>
+          <option value="newest">Newest</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+        </select>
+      </div>
+    </div>
+
+    <p data-menu-results-count class="text-center text-sm text-choco-500 dark:text-cream-300 mt-6" aria-live="polite"></p>
+
+    <div id="menu-grid" data-menu-paginate data-page-size="12" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
 
       <div id="birthday" data-filter-item data-categories="birthday" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
         <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Golden confetti birthday cake with candles" class="w-full h-52 object-cover">
@@ -903,10 +930,117 @@
         </div>
       </div>
 
+      <div id="graduation" data-filter-item data-categories="graduation" data-added="1" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1695275675120-b9e5417c3066?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Law school graduation sheet cake with fondant scales of justice and gavel" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Graduation</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Grad Cap Sheet Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $58</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Fondant emblem of your choice — cap, diploma, or degree icon — on a berry-topped sheet cake.</p>
+          <a href="order.html?occasion=Graduation" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="graduation" data-added="1" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1656110731636-9b042a4be66e?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Mini cakes topped with fondant graduation caps" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Graduation</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Grad Cap Mini Cakes (6)</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$48</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Individual mini cakes topped with a hand-piped fondant graduation cap.</p>
+          <a href="order.html?occasion=Graduation" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="graduation" data-added="1" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1661105014322-f498aed60faa?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="School-color cake pops arranged on a tray for a graduation party" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Graduation</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">School Colors Cake Pop Tray</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$42</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">24 cake pops dipped in your school colors — great for the whole grad party.</p>
+          <a href="order.html?occasion=Graduation" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div id="festivals" data-filter-item data-categories="festivals" data-added="1" class="cake-card scroll-mt-32 bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up">
+        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Rainbow sprinkle-covered layer cake with star toppers" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Festivals</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Rainbow Festival Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">From $62</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Vivid rainbow-layered sponge, sprinkle-covered finish, gold star toppers — built for any festival table.</p>
+          <a href="order.html?occasion=Festivals" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="festivals" data-added="1" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://images.unsplash.com/photo-1616547772232-76ca3319cf11?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="Slice of confetti funfetti cake with ribbons and sprinkles" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Festivals</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Confetti Funfetti Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$52</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">Classic vanilla funfetti sponge packed with rainbow sprinkles, finished in silky buttercream.</p>
+          <a href="order.html?occasion=Festivals" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <div data-filter-item data-categories="festivals" data-added="1" class="cake-card bg-white dark:bg-choco-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-soft transition h-full flex flex-col" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://images.unsplash.com/photo-1590174709246-f95754d54cc1?w=700&q=80&auto=format&fit=crop" data-fallback loading="lazy" alt="White cake covered in colorful candles with a sprinkle border" class="w-full h-52 object-cover">
+        <div class="p-6 flex flex-col flex-1">
+          <span class="text-xs font-semibold text-raspberry-600 dark:text-caramel-300 uppercase tracking-wide">Festivals</span>
+          <div class="flex items-start justify-between gap-3 mt-1">
+            <h3 class="font-display text-xl font-semibold">Celebration Candle Cake</h3>
+            <span class="font-display text-lg font-semibold text-raspberry-600 dark:text-caramel-400 whitespace-nowrap">$56</span>
+          </div>
+          <p class="text-sm text-choco-500 dark:text-cream-300 mt-2">A whole flickering field of candles on a simple vanilla cake with a sprinkle-dipped base.</p>
+          <a href="order.html?occasion=Festivals" class="inline-flex items-center gap-1.5 text-sm font-semibold text-raspberry-600 dark:text-caramel-400 mt-auto hover:gap-2.5 transition-all">
+            Order Now <i class="fa-solid fa-arrow-right rtl:rotate-180 text-xs" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <div class="text-center mt-4">
-      <p class="text-sm text-choco-500 dark:text-cream-300 mt-10" data-aos="fade-up">Don't see exactly what you're picturing? <a href="order.html" class="text-raspberry-600 dark:text-caramel-400 font-semibold underline">Describe your custom cake here</a> and we'll design it from scratch.</p>
+    <div class="mt-10" data-menu-pagination-wrap>
+      <nav class="hidden sm:flex items-center justify-center gap-2" data-menu-pagination aria-label="Menu pagination">
+        <button type="button" data-page-prev aria-label="Previous page" class="w-10 h-10 rounded-full border border-choco-200 dark:border-choco-600 grid place-items-center text-choco-600 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 disabled:opacity-40 disabled:pointer-events-none transition">
+          <i class="fa-solid fa-chevron-left rtl:rotate-180" aria-hidden="true"></i>
+        </button>
+        <div data-page-numbers class="flex items-center gap-1.5"></div>
+        <button type="button" data-page-next aria-label="Next page" class="w-10 h-10 rounded-full border border-choco-200 dark:border-choco-600 grid place-items-center text-choco-600 dark:text-cream-200 hover:bg-raspberry-50 dark:hover:bg-choco-700 disabled:opacity-40 disabled:pointer-events-none transition">
+          <i class="fa-solid fa-chevron-right rtl:rotate-180" aria-hidden="true"></i>
+        </button>
+      </nav>
+      <div class="sm:hidden text-center">
+        <button type="button" data-load-more class="btn-outline inline-flex items-center gap-2 border-2 border-raspberry-600 text-raspberry-600 dark:text-caramel-300 dark:border-caramel-400 font-semibold px-7 py-3 rounded-full hover:bg-raspberry-600 hover:text-white dark:hover:bg-caramel-400 dark:hover:text-choco-900">
+          Load More <i class="fa-solid fa-chevron-down text-xs" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="text-center mt-10">
+      <p class="text-sm text-choco-500 dark:text-cream-300" data-aos="fade-up">Don't see exactly what you're picturing? <a href="order.html" class="text-raspberry-600 dark:text-caramel-400 font-semibold underline">Describe your custom cake here</a> and we'll design it from scratch.</p>
     </div>
   </div>
 </section>
