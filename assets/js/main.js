@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const href = link.getAttribute('href');
     if (href === current || (current === '' && href === 'index.html')) {
       link.classList.add('text-raspberry-600', 'dark:text-caramel-400');
-      link.classList.remove('text-choco-700', 'dark:text-cream-200');
+      link.classList.remove('text-choco-700', 'dark:text-cream-100');
       link.setAttribute('aria-current', 'page');
     }
   });
@@ -1132,5 +1132,65 @@ document.addEventListener('DOMContentLoaded', function () {
 
     render();
   });
+
+  /* ---------------------------------------------------------------------
+     25. MENU CATEGORY SIDEBAR/DROPDOWN ADAPTER (Menu page)
+     The sidebar's filter buttons (data-filter-group, section 9) already
+     drive the grid on their own — this section only keeps two extra UI
+     pieces in sync with whichever button is active: the compact
+     mobile/tablet/laptop <select> (not a button, so it needs its own
+     event wiring rather than the generic click-based system) and the
+     category intro line (icon + title + description) above the grid.
+  --------------------------------------------------------------------- */
+  (function () {
+    const select = document.querySelector('[data-menu-category-select]');
+    const filterGroup = document.querySelector('[data-filter-group="#menu-grid"]');
+    const introIcon = document.querySelector('[data-menu-category-intro-icon] i');
+    const introTitle = document.querySelector('[data-menu-category-intro-title]');
+    const introText = document.querySelector('[data-menu-category-intro-text]');
+    if (!filterGroup) return;
+
+    const CATEGORY_INFO = {
+      all: { icon: 'fa-grip', title: 'All Cakes', text: 'Our full collection, ready to resize, re-flavor, or fully customize.' },
+      birthday: { icon: 'fa-cake-candles', title: 'Birthday Cakes', text: 'Colorful, custom-themed designs built around whatever your celebration calls for.' },
+      wedding: { icon: 'fa-ring', title: 'Wedding Cakes', text: 'Tiered buttercream or naked-cake finishes with a complimentary tasting session.' },
+      custom: { icon: 'fa-palette', title: 'Custom Themes', text: 'Send a photo, theme, or color palette — we sketch a one-of-a-kind concept before baking.' },
+      anniversary: { icon: 'fa-gem', title: 'Anniversary Cakes', text: 'Champagne sponge, berry compote, and edible gold leaf for milestones worth savoring.' },
+      babyshower: { icon: 'fa-baby', title: 'Baby Shower Cakes', text: 'Soft pastel ombre finishes with hand-piped sugar florals to welcome your little one.' },
+      corporate: { icon: 'fa-briefcase', title: 'Corporate Event Cakes', text: 'Branded logo sheet cakes and bulk orders for launches, meetings, and office celebrations.' },
+      cupcake: { icon: 'fa-cookie-bite', title: 'Cupcakes', text: 'Boxed by the dozen in a rotating lineup of flavors, from classic to seasonal.' },
+      seasonal: { icon: 'fa-leaf', title: 'Seasonal Specials', text: 'Rotating flavors that follow the season, available for a limited time only.' },
+      graduation: { icon: 'fa-graduation-cap', title: 'Graduation Cakes', text: 'Cap toppers, school colors, and diploma details done right.' },
+      festivals: { icon: 'fa-sparkles', title: 'Festival Cakes', text: 'Bright, sprinkle-covered designs built for a crowd, for any festival table.' }
+    };
+
+    function updateIntro(filter) {
+      const info = CATEGORY_INFO[filter] || CATEGORY_INFO.all;
+      if (introIcon) introIcon.className = 'fa-solid ' + info.icon;
+      if (introTitle) introTitle.textContent = info.title;
+      if (introText) introText.textContent = info.text;
+      if (select && select.value !== filter) select.value = filter;
+    }
+
+    filterGroup.querySelectorAll('[data-filter]').forEach(function (btn) {
+      btn.addEventListener('click', function () { updateIntro(btn.getAttribute('data-filter')); });
+    });
+
+    if (select) {
+      select.addEventListener('change', function () {
+        const match = filterGroup.querySelector('[data-filter="' + select.value + '"]');
+        if (match) match.click();
+      });
+    }
+
+    window.addEventListener('hashchange', function () {
+      const hash = window.location.hash.replace('#', '');
+      if (hash && CATEGORY_INFO[hash]) updateIntro(hash);
+    });
+
+    // Reflect whichever category is already active on load (e.g. arriving with a #hash).
+    const initiallyActive = filterGroup.querySelector('[data-filter][aria-pressed="true"]');
+    if (initiallyActive) updateIntro(initiallyActive.getAttribute('data-filter'));
+  })();
 
 });

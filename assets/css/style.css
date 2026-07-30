@@ -6,6 +6,10 @@
 
 :root{
   --scallop-size: 26px;
+  color-scheme: light;
+}
+.dark{
+  color-scheme: dark;
 }
 
 html{
@@ -36,6 +40,18 @@ body{
 ::-webkit-scrollbar-track{ background: transparent; }
 ::-webkit-scrollbar-thumb{ background: #C9184A; border-radius: 999px; }
 .dark ::-webkit-scrollbar-thumb{ background: #F4A261; }
+
+/* ---------- Native <select> dropdown options (dark mode) ----------
+   The `color-scheme` rule above (root) fixes most browsers' native
+   popup chrome automatically, but desktop Chrome/Firefox/Edge also let
+   individual <option> elements carry their own background/text color —
+   set those explicitly too so the open dropdown list matches the
+   closed select's theme instead of falling back to plain white text
+   on a plain white row. */
+.dark select option{
+  background-color: #2E2016;
+  color: #FFF8F0;
+}
 
 /* ---------- Focus states (accessibility) ---------- */
 a:focus-visible,
@@ -88,6 +104,22 @@ select:focus-visible{
   --scallop-size: 20px;
   --scallop-color: inherit;
   height: 16px;
+}
+
+/* Bakery-ticket testimonial cards (Desserts page) — a dashed "tear line"
+   stands in for a perforated receipt edge, without needing to fake
+   punch-hole notches that would otherwise have to match whatever
+   background happens to sit behind the card in both light and dark mode. */
+.dessert-ticket{
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+}
+.dessert-ticket-tear{
+  border-top: 2px dashed rgba(197,163,143,.45);
+  margin-top: 1rem;
+}
+.dark .dessert-ticket-tear{
+  border-top-color: rgba(255,255,255,.15);
 }
 
 /* ---------- Sprinkle dot pattern background ---------- */
