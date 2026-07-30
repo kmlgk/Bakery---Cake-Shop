@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     drawer.classList.add('open');
     backdrop.classList.add('open');
     openBtn.setAttribute('aria-expanded', 'true');
+    document.documentElement.style.overflow = 'hidden';
     document.body.style.overflow = 'hidden';
   }
   function closeDrawer() {
@@ -96,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     drawer.classList.remove('open');
     backdrop.classList.remove('open');
     openBtn.setAttribute('aria-expanded', 'false');
+    document.documentElement.style.overflow = '';
     document.body.style.overflow = '';
   }
   if (openBtn) openBtn.addEventListener('click', openDrawer);
